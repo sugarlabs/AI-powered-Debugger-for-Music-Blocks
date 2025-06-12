@@ -1,0 +1,7 @@
+streamlit~=1.30.0
+qdrant-client~=1.14.2
+google-generativeai
+tqdm~=4.67.1
+sentence-transformers~=4.1.0
+protobuf~=4.25.8
+python-dotenv~=1.0.1
