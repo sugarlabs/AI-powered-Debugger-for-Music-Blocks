@@ -10,10 +10,8 @@ try:
         st.error("❌ GEMINI_API_KEY not found in Streamlit secrets")
         st.stop()
 
-    genai.configure(
-        api_key=api_key,
-        transport="rest",  # More reliable than gRPC in cloud environments
-    )
+    genai.configure(api_key=api_key)
+    
 except Exception as e:
     st.error(f"❌ Configuration failed: {str(e)}")
     st.stop()
