@@ -1,72 +1,71 @@
 import os
-from qdrant_client import QdrantClient, models
-from sentence_transformers import SentenceTransformer
-from tqdm import tqdm
+import config
+from langchain_community.embeddings import HuggingFaceEmbeddings
+from qdrant_client import QdrantClient
+from qdrant_client.models import Distance, VectorParams, PointStruct
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain_core.documents import Document
 
-def load_data(data_folder):
-    documents = []
-    for subdir, _, files in os.walk(data_folder):
-        for file in files:
-            if file.endswith((".txt", ".md")):  # Add this check
-                with open(os.path.join(subdir, file), 'r', encoding='utf-8') as f:
-                    documents.append(f.read())
-    return documents
+# Setup
+client = QdrantClient(
+    url=config.QDRANT_URL,
+    api_key=config.QDRANT_API_KEY
+)
 
-def chunk_text(text, max_length=500):
-    # Use newline-based splitting for markdown instead of period
-    lines = text.split('\n')
-    chunks, current = [], ""
+docs_dir = "data/docs"
+raw_docs = []
 
-    for line in lines:
-        line = line.strip()
-        if not line:
-            continue
+# Read text files
+for filename in os.listdir(docs_dir):
+    if filename.endswith(".txt") or filename.endswith(".md"):
+        filepath = os.path.join(docs_dir, filename)
+        try:
+            with open(filepath, "r", encoding="utf-8") as f:
+                content = f.read().strip()
+                if content:
+                    raw_docs.append(Document(page_content=content, metadata={"source": filename}))
+        except Exception as e:
+            print(f"Error reading {filename}: {e}")
 
-        if len(current) + len(line) < max_length:
-            current += line + " "
-        else:
-            chunks.append(current.strip())
-            current = line + " "
+if not raw_docs:
+    raise ValueError("No valid documents found in the 'docs/' directory.")
 
-    if current:
-        chunks.append(current.strip())
+# Split documents into smaller chunks
+splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=30)
+chunked_docs = splitter.split_documents(raw_docs)
 
-    return chunks
+# Generate embeddings
+embedding_model = HuggingFaceEmbeddings(model_name=config.EMBEDDING_MODEL)
+texts = [doc.page_content for doc in chunked_docs]
+embeddings = embedding_model.embed_documents(texts)
 
+# Create collection if needed
+collection_name = "mb_docs"
+existing_collections = client.get_collections().collections
+collection_names = [c.name for c in existing_collections]
 
-def ingest_to_qdrant(collection_name="musicblocks_debugger"):
-    qdrant = QdrantClient(host="localhost", port=6333)  # Use persistent DB via Docker
-    model = SentenceTransformer("all-MiniLM-L6-v2")
-
-    documents = load_data("data")
-    all_chunks = []
-    for doc in tqdm(documents):
-        chunks = chunk_text(doc)
-        all_chunks.extend(chunks)
-
-    if not all_chunks:
-        print("⚠️ No chunks created. Check if your .md/.txt files contain usable text.")
-        return
-
-    embeddings = model.encode(all_chunks).tolist()
-
-    if not embeddings:
-        print("⚠️ No data was embedded. Check if your `.md` files contain valid text.")
-        return
-
-    qdrant.recreate_collection(
+if collection_name not in collection_names:
+    client.create_collection(
         collection_name=collection_name,
-        vectors_config=models.VectorParams(size=len(embeddings[0]), distance=models.Distance.COSINE),
+        vectors_config=VectorParams(size=len(embeddings[0]), distance=Distance.COSINE)
     )
+    print(f"✅ Created collection '{collection_name}' in Qdrant.")
+else:
+    print(f"Collection '{collection_name}' already exists. Skipping creation.")
 
-    qdrant.upload_collection(
-        collection_name=collection_name,
-        vectors=embeddings,
-        payload=[{"text": c} for c in all_chunks],
-        ids=list(range(len(all_chunks)))
+# Prepare and upload points
+points = [
+    PointStruct(
+        id=i,
+        vector=embeddings[i],
+        payload={
+            "page_content": chunked_docs[i].page_content,
+            **chunked_docs[i].metadata
+        }
     )
+    for i in range(len(chunked_docs))
+]
 
-    print(f"✅ Ingested {len(all_chunks)} chunks into Qdrant.")
+client.upsert(collection_name=collection_name, points=points)
+print(f"✅ Uploaded {len(points)} chunks to Qdrant collection '{collection_name}'.")
 
-if __name__ == "__main__":
-    ingest_to_qdrant()

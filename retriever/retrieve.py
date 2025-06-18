@@ -1,8 +1,18 @@
 from qdrant_client import QdrantClient
-from sentence_transformers import SentenceTransformer
+from dotenv import load_dotenv
+import os
 
-def retrieve_relevant_chunks(query, top_k=5, collection_name="musicblocks_debugger"):
-    qdrant = QdrantClient(host="localhost", port=6333)  # Use host="localhost" for persistent DB
+load_dotenv()
+
+QDRANT_URL = os.getenv("QDRANT_URL")
+QDRANT_API_KEY = os.getenv("QDRANT_API_KEY")
+
+def retrieve_relevant_chunks(query, top_k=5, collection_name="mb_docs"):
+    from sentence_transformers import SentenceTransformer
+    qdrant = QdrantClient(
+        url=QDRANT_URL,
+        api_key=QDRANT_API_KEY
+    )
     model = SentenceTransformer("all-MiniLM-L6-v2")
     query_vector = model.encode(query).tolist()
 
@@ -12,4 +22,4 @@ def retrieve_relevant_chunks(query, top_k=5, collection_name="musicblocks_debugg
         limit=top_k
     )
 
-    return [hit.payload["text"] for hit in search_result]
+    return [hit.payload.get("text", "") for hit in search_result if "text" in hit.payload]
