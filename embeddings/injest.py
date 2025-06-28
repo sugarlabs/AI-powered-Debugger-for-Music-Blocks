@@ -12,7 +12,7 @@ client = QdrantClient(
     api_key=config.QDRANT_API_KEY
 )
 
-docs_dir = "data/docs"
+docs_dir = "data/guide"
 raw_docs = []
 
 # Read text files
@@ -68,4 +68,3 @@ points = [
 
 client.upsert(collection_name=collection_name, points=points)
 print(f"✅ Uploaded {len(points)} chunks to Qdrant collection '{collection_name}'.")
-
