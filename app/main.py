@@ -10,7 +10,6 @@ st.set_page_config(page_title="🎵 Music Blocks Debugger")
 
 st.title("🎵 Music Blocks Debugger")
 
-# Session state initialization
 if "chat_history" not in st.session_state:
     st.session_state.chat_history = []
 if "project_code" not in st.session_state:
@@ -18,7 +17,6 @@ if "project_code" not in st.session_state:
 if "user_prompt_count" not in st.session_state:
     st.session_state.user_prompt_count = 0
 
-# Instruction to make responses easy for kids
 SYSTEM_INSTRUCTION = (
      """You are Music Blocks Bot, a friendly and playful assistant that helps kids debug their Music Blocks projects. Follow these rules:
 
@@ -57,7 +55,6 @@ with st.expander("🎒 Drop Your Music Blocks Project Here!", expanded=not st.se
             st.session_state.project_code = code.strip()
             st.success("Project code saved !!")
 
-            # Generate initial message from the debugger
             with st.spinner("🎼 The Debugger is tuning its ears..."):
                 try:
                     context_chunks = retrieve_relevant_chunks(st.session_state.project_code)
@@ -96,10 +93,8 @@ if st.session_state.project_code:
         st.session_state.user_prompt_count += 1
         with st.spinner("🎼 The Debugger is tuning its ears..."):
             try:
-                # Retrieve relevant documentation chunks based on project + question
                 context_chunks = retrieve_relevant_chunks(st.session_state.project_code + user_input)
 
-                # Rebuild prior conversation
                 conversation = ""
                 for turn in st.session_state.chat_history:
                     role = "🎧 You" if turn["role"] == "user" else "🎹 Music Blocks Bot"
