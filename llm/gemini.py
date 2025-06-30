@@ -3,23 +3,20 @@ import google.generativeai as genai
 from google.api_core import retry
 import time
 
-# Load and validate API key from Streamlit secrets
 try:
     api_key = st.secrets.get("GEMINI_API_KEY")
     if not api_key:
-        st.error("❌ GEMINI_API_KEY not found in Streamlit secrets.")
+        st.error("GEMINI_API_KEY not found in Streamlit secrets.")
         st.stop()
     genai.configure(api_key=api_key)
 except Exception as e:
-    st.error(f"❌ Configuration error: {e}")
+    st.error(f"Configuration error: {e}")
     st.stop()
 
-# Constants
 MODEL_NAME = "models/gemini-1.5-flash"
 MAX_RETRIES = 3
-TIMEOUT = 30  # seconds
+TIMEOUT = 30 
 
-# Retry decorator for robustness
 @retry.Retry(
     initial=1.0,
     maximum=10.0,
@@ -46,20 +43,18 @@ def ask_gemini(prompt: str) -> str:
             },
         )
 
-        # First try simple access
         if hasattr(response, "text") and response.text:
             return response.text
 
-        # Fallback: Access nested Gemini parts structure
         try:
             return response.candidates[0].content.parts[0].text
         except Exception:
-            st.warning("⚠️ Could not access `.text`, trying candidates[0].content.parts[0].text")
-            st.code(str(response))  # Debug output
+            st.warning("Could not access `.text`, trying candidates[0].content.parts[0].text")
+            st.code(str(response))
             raise ValueError("Gemini response format is unexpected.")
 
     except Exception as e:
-        st.warning(f"⚠️ Retrying due to error: {str(e)}")
+        st.warning(f"Retrying due to error: {str(e)}")
         raise
 
 def safe_ask_gemini(prompt: str) -> str | None:
@@ -69,14 +64,13 @@ def safe_ask_gemini(prompt: str) -> str | None:
             return ask_gemini(prompt)
         except Exception as e:
             if attempt == MAX_RETRIES - 1:
-                st.error(f"❌ Gemini failed after {MAX_RETRIES} attempts: {e}")
+                st.error(f"Gemini failed after {MAX_RETRIES} attempts: {e}")
                 return None
-            time.sleep(1 * (attempt + 1))  # Simple exponential backoff
+            time.sleep(1 * (attempt + 1))
             return None
     return None
 
 
-# Test UI
 if __name__ == "__main__":
     st.title("Gemini API Test")
     prompt = st.text_input("Enter prompt", "Explain Music Blocks in 2 lines.")
@@ -85,5 +79,5 @@ if __name__ == "__main__":
         with st.spinner("Thinking..."):
             reply = safe_ask_gemini(prompt)
             if reply:
-                st.success("✅ Gemini replied:")
+                st.success("Gemini replied:")
                 st.write(reply)
