@@ -1,7 +1,7 @@
 import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-from json_to_text import convert_music_blocks
+from JSONParser.json_parser import convert_music_blocks
 import json
 import streamlit as st
 from retriever.retrieve import retrieve_relevant_chunks
