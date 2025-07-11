@@ -1,10 +1,12 @@
 import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-
+from json_to_text import convert_music_blocks
+import json
 import streamlit as st
 from retriever.retrieve import retrieve_relevant_chunks
 from llm.gemini import ask_gemini
+from datetime import datetime
 
 st.set_page_config(page_title="🎵 Music Blocks Debugger")
 
@@ -22,14 +24,14 @@ SYSTEM_INSTRUCTION = (
 
         1. **Personality**: Be like a patient music teacher who makes learning fun! Use emojis 🎵✨ sometimes to keep it lively.
 
-        2. **Language**: 
+        2. **Language**:
             - Use simple words (max 2 syllables when possible)
             - Short sentences (max 10 words)
             - Examples: "Oh no! Your drums are too quiet 🥁 Let's turn them up!" or "Wow! That's a cool melody! 🎶"
-   
+
         3. **Interactivity**:
             - Always ask questions to keep kids engaged
-            - Offer choices: "Want to try fixing the drums first or the piano?" 
+            - Offer choices: "Want to try fixing the drums first or the piano?"
             - Give high-fives for good work: "You fixed it! 🙌"
 
         4. **Debugging Help**:
@@ -50,16 +52,24 @@ SYSTEM_INSTRUCTION = (
 
 with st.expander("🎒 Drop Your Music Blocks Project Here!", expanded=not st.session_state.project_code):
     code = st.text_area("🎼 Paste your magical music code below ✨", height=300)
-    if st.button("🚀 Launch My Music Project!"):
+    if st.button("🚀 Launch My Music Blocks Project!"):
         if code.strip():
-            st.session_state.project_code = code.strip()
-            st.success("Project code saved !!")
-
-            with st.spinner("🎼 The Debugger is tuning its ears..."):
+            try:
                 try:
-                    context_chunks = retrieve_relevant_chunks(st.session_state.project_code)
+                    json_data = json.loads(code.strip())
+                    converted_text = "\n".join(convert_music_blocks(json_data))
+                    st.session_state.project_code = converted_text
+                except json.JSONDecodeError as e:
+                    st.error(f"Invalid JSON format: {str(e)}")
+                    st.stop()
 
-                    intro_prompt = (
+                st.success("Project code saved !!")
+
+                with st.spinner("🎼 The Debugger is tuning its ears..."):
+                    try:
+                        context_chunks = retrieve_relevant_chunks(st.session_state.project_code)
+
+                        intro_prompt = (
                             SYSTEM_INSTRUCTION + "\n\n"
                             + "You are being given a Music Blocks project code. Your task is to analyze this code and try to understand what the student is trying to build — is it a melody, a rhythm, a loop-based song, an instrument experiment, a math-based music pattern, etc.?\n\n"
                             + "Here is the full Music Blocks project code:\n"
@@ -70,17 +80,19 @@ with st.expander("🎒 Drop Your Music Blocks Project Here!", expanded=not st.se
                             + "\"It appears to me that your project is about...\" 🎶\n"
                             + "Then ask: \"Did I get that right? What else do you want to tell me about your project before we begin debugging?\"\n\n"
                             + "Keep your answer lively, musical, and kid-friendly. Use emojis where helpful. Keep sentences short and clear."
-                    )
+                        )
 
-                    gemini_intro_reply = ask_gemini(intro_prompt)
+                        gemini_intro_reply = ask_gemini(intro_prompt)
 
-                    st.session_state.chat_history.append({
-                        "role": "gemini",
-                        "content": gemini_intro_reply
-                    })
+                        st.session_state.chat_history.append({
+                            "role": "gemini",
+                            "content": gemini_intro_reply
+                        })
 
-                except Exception as e:
-                    st.error(f"Gemini API error during intro message: {str(e)}")
+                    except Exception as e:
+                        st.error(f"Gemini API error during intro message: {str(e)}")
+            except Exception as e:
+                st.error(f"Error processing project code: {str(e)}")
         else:
             st.warning("Please enter a valid Music Blocks project code.")
 
@@ -94,7 +106,6 @@ if st.session_state.project_code:
         with st.spinner("🎼 The Debugger is tuning its ears..."):
             try:
                 context_chunks = retrieve_relevant_chunks(st.session_state.project_code + user_input)
-
                 conversation = ""
                 for turn in st.session_state.chat_history:
                     role = "🎧 You" if turn["role"] == "user" else "🎹 Music Blocks Bot"
@@ -137,6 +148,19 @@ if st.session_state.project_code:
         with st.chat_message("user" if turn["role"] == "user" else "assistant"):
             st.markdown(turn["content"])
 
+    def generate_chat_export():
+        export_content = "Music Blocks Debugger Chat Export\n"
+        export_content += f"Generated at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n"
+        export_content += "Project Code:\n"
+        export_content += st.session_state.project_code + "\n\n"
+        export_content += "Chat History:\n\n"
+
+        for turn in st.session_state.chat_history:
+            role = "You" if turn["role"] == "user" else "Music Blocks Bot"
+            export_content += f"{role}:\n{turn['content']}\n\n"
+
+        return export_content
+
     scroll_script = """
     <script>
         setTimeout(function() {
@@ -150,8 +174,21 @@ if st.session_state.project_code:
     """
     st.components.v1.html(scroll_script, height=0)
 
-    if st.button("🗑️ Clear Chat"):
-        st.session_state.chat_history = []
-        st.success("Chat history cleared.")
-    else:
-        st.info("Please enter your Music Blocks project code above to begin debugging.")
+    col1, col2 = st.columns(2)
+
+    with col1:
+        if st.session_state.chat_history:
+            st.download_button(
+                "💾 Export Chat",
+                data=generate_chat_export(),
+                file_name=f"music_blocks_chat_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt",
+                mime="text/plain",
+                help="Download the full chat history as a text file"
+            )
+        else:
+            st.button("💾 Export Chat", disabled=True, help="No chat history to export yet")
+
+    with col2:
+        if st.button("🗑️ Clear Chat", help="Clear all chat messages"):
+            st.session_state.chat_history = []
+            st.success("Chat history cleared!")
