@@ -7,6 +7,14 @@ import streamlit as st
 from retriever.retrieve import retrieve_relevant_chunks
 from llm.gemini import ask_gemini
 from datetime import datetime
+import threading
+import uvicorn
+
+def run_fastapi():
+    uvicorn.run("app.api:app", host="0.0.0.0", port=8000, log_level="info")
+
+threading.Thread(target=run_fastapi, daemon=True).start()
+
 
 st.set_page_config(page_title="🎵 Music Blocks Debugger")
 
@@ -192,3 +200,4 @@ if st.session_state.project_code:
         if st.button("🗑️ Clear Chat", help="Clear all chat messages"):
             st.session_state.chat_history = []
             st.success("Chat history cleared!")
+
