@@ -113,7 +113,7 @@ if st.session_state.project_code:
 
                 mode_instruction = ""
 
-                if st.session_state.user_prompt_count < 4:
+                if st.session_state.user_prompt_count < 2:
                     mode_instruction = (
                         "You should keep the tone curious and keep asking questions to understand what the student wants to do. "
                         "Keep things fun, ask what they’re trying to build, and make them feel excited to share more! 🎵"
