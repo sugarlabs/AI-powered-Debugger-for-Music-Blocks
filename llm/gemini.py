@@ -1,17 +1,21 @@
-import streamlit as st
 import google.generativeai as genai
 from google.api_core import retry
 import time
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 try:
+    import streamlit as st
     api_key = st.secrets.get("GEMINI_API_KEY")
-    if not api_key:
-        st.error("GEMINI_API_KEY not found in secrets.")
-        st.stop()
-    genai.configure(api_key=api_key)
-except Exception as e:
-    st.error(f"Configuration error: {e}")
-    st.stop()
+except (ImportError, AttributeError):
+    api_key = os.getenv("GEMINI_API_KEY")
+
+if not api_key:
+    raise ValueError("GEMINI_API_KEY not found in either Streamlit secrets or environment variables")
+
+genai.configure(api_key=api_key)
 
 MODEL_NAME = "models/gemini-1.5-flash"
 MAX_RETRIES = 3

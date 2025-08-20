@@ -5,6 +5,9 @@ from JSONParser.json_parser import convert_music_blocks
 from retriever.retrieve import retrieve_relevant_chunks
 from llm.gemini import ask_gemini
 import json
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = FastAPI()
 
@@ -105,7 +108,10 @@ async def analyze(request: Request):
         })
 
     except Exception as e:
-        return JSONResponse(status_code=500, content={"error": f"Internal server error: {str(e)}"})
+        import traceback
+        error_details = traceback.format_exc()
+        print(f"Error in /analyze endpoint: {error_details}")
+        return JSONResponse(status_code=500, content={"error": f"Internal server error: {str(e)}", "details": error_details})
 
 if __name__ == "__main__":
     import uvicorn
