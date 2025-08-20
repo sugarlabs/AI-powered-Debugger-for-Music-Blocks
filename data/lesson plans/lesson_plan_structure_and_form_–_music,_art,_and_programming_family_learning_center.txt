@@ -1,0 +1,111 @@
+Title: Lesson Plan: Structure and Form – Music, Art, and Programming Family Learning Center
+URL: https://mapflc.com/lesson-plans/lesson-plan-structure-and-form/
+Age Range: 7-13
+Duration: 60 min
+
+Summary
+=======
+In this lesson students will explore musical form using the action blocks.
+For this lesson we will use Hot Cross Buns. Hot Cross Buns is a Power Piece in that it demonstrates two key concepts very well and in the simplest possible way.
+First, it demonstrates a melody that uses scale degrees 3, 2, and 1. Secondly, its melody has a solid and salient AABA structure. Music Blocks is a good way to introduce melodic structure and form because chunks can be scripted to be analogous to musical form and melodic structure easily and clearly.
+
+Age:
+====
+7-13 years
+
+Lesson duration:
+================
+60 minutes
+As a group, figure out form of HCB with colored cups. (10 min)
+In small groups (maybe individually), have students transcribe HCB with Music Blocks by ordering pre-fabricated blocks (with names as name of different colors). (10 min)
+Explore transformations using repeat/transposition/inverse blocks. (10 min)
+Ask students to change it up to make their own form. (10 min)
+Change the notes of the stacks to make your own melodies within the form. (10 min)
+Showcase, sharing, and reflection. (10 min)
+
+Number of Students
+==================
+Up to 10.
+
+Rationale
+=========
+In music, the whole note is the reference for which all divisions are made. A geometric circle works similarly as well — 360 being “the whole”. The way we divide 360 creates the basic shapes.
+
+Objectives
+==========
+To explore structure. We will learn more about musical form as well as scripts in computation.
+
+Lesson
+======
+
+
+Introduction
+============
+Lead students to discover “Hot Cross Buns”. Often, I like to use red and blue cups to represent different parts of the melody. Sometimes, I also like to do a “name that tune” by dovetailing from a broader introduction of Music Blocks’ basic features into the first notes of Hot Cross Buns and asking students if they know the melody (if not, we spend some time learning it).
+
+Part 1
+======
+
+
+A. Starting the Lesson
+======================
+Students will start their activity with the melodic components of Hot Cross Buns scripted as two individual chunks an the screen and the necessary blocks to create the melody.
+
+B. Problem Solving
+==================
+Students should be given an opportunity to sing Hot Cross Buns, led by a knowledgeable instructor. This will help the class warm up their ears and refresh their memory of the tune, so that they can focus on the problem solving and theory aspects of the activity. Alphabetic note names are also possible (as well as East Indian solfѐge), but the default is Western solfѐge . You sing the tune together with both the lyrics and the solfѐge/alphabet names of the notes.
+Teachers should guide students to observe the structure of the chunks on the screen. Have the students, for example, point to the notes in the chunks as they sing. Ask the class questions like “What do you think the number next to the note block mean?” and “What do you think the repeat blocks do?” If there is time, you may even try to have the students sing what they see in front of them without repeats and with different numbers for the note value (without having them move any of the blocks) to test their understanding.
+Once the class is adequately prepared, ask them to try to use the five blocks on the left hand side of the screen (two “HCB” blocks, one “Penny” block, a Repeat block, and a start block) to create Hot Cross Buns’ melody.
+
+C. Mistakes are Opportunities
+=============================
+If students make a mistake, that is fine. It is an opportunity to test their musicianship and problem-solving skills. If students make an error, teachers should ask the student to sing their creations (not just play them). Ask the students if they remember what it is suppose to sound like and have them sing the original memory.
+Try to diagnose the problem by asking yourself the following questions:
+Have they forgotten the tune?
+Are they struggling with the abstract representation?
+Most importantly, what is their approach to solving the problem at hand?
+
+D. Final Solution
+=================
+Once students begin to solve the problem, task them to describing their method. How did they arrive at their solution? What was their strategy?
+
+D. Extensions
+=============
+These are possible extensions of Hot Cross Buns.
+
+Performance/Critique
+====================
+Have students discuss the relationship between shape and rhythm. You can start from the questions in the bullet list above.
+Have students create their own versions of the projects (either in class or at home) and show their new versions. What is unique? Does it explore something new with regard to note value?
+
+Materials
+=========
+Music Blocks software (Computer, up-to-date browser)
+If possible, red and blue cups (or equivalent) to demonstrate the musical form (e.g. blue, blue, red, blue for AABA).
+
+Assessments
+===========
+Observe participation
+Do the students action blocks?
+What remixing choices did students make?
+
+Music Blocks Lesson Plans
+=========================
+Lesson Plan: Structure and Form
+Lesson Plan: Building a Scale
+Lesson Plan: Chest, Snap, Clap with Phrase Maker (2 of 3)
+Lesson Plan: Colors of Intervals
+Lesson Plan: Creating Harmonics
+Lesson Plan: Dissonance to Consonance
+Lesson Plan: Exploring the Harmonic Series
+Lesson Plan: Frere Jacques with Phrase Maker (3 of 3)
+Lesson Plan: Geometry and Rhythms
+Lesson Plan: Hailstorm Music with Collatz Conjecture
+Lesson Plan: Interval Sudoku
+Lesson Plan: Make a Metronome
+Lesson Plan: Make Your Own Tuner
+Lesson Plan: Thirds and Sixths
+Lesson Plan: Twinkle Twinkle with Phrase Maker (1 of 3)
+Lesson Plan: Guitar Frets and Semi-tones
+Copyright 2019-2023 | CC BY-SA | Remake Music LLC
+

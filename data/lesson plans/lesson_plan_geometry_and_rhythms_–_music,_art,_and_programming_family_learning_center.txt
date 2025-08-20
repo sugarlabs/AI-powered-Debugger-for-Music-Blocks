@@ -1,0 +1,135 @@
+Title: Lesson Plan: Geometry and Rhythms – Music, Art, and Programming Family Learning Center
+URL: https://mapflc.com/lesson-plans/lesson-plan-geometry-and-rhythms/
+Age Range: 7-13
+Duration: 60 min
+
+Summary
+=======
+In this lesson students will explore the relationship between diving a whole note and dividing a whole circle.
+
+Age:
+====
+7-13 years
+
+Lesson duration:
+================
+60 minutes
+Introduction: Discuss the various shapes. How many sides? Other properties? Discuss note values. Any relationship to shapes? (10 min)
+Begin by creating simple shapes. Introduce division of 360. (10 min)
+Draw a connection between the number of sides and the number 360 is divided by as well as the number of repeats. All of these numbers are the same. (10 min)
+Re-introduce Box. How can box be used to express this idea? (5 min)
+Show whole note as a circle and divide it by various note values (e.g. half, quarter, eighth). Any relationship to these shapes? What about dividing by 3 or 5 — what are those called in music?
+
+Number of Students
+==================
+Up to 10.
+
+Rationale
+=========
+In music, the whole note is the reference for which all divisions are made. A geometric circle works similarly as well — 360 being “the whole”. The way we divide 360 creates the basic shapes.
+
+Objectives
+==========
+By drawing the connection between the two, and using programming tools to create dynamic “rhythm generators” the underlying concept of rhythm is better understood and students should be able to problem solve to figure out any division of the whole that they may encounter when reading music.
+
+Lesson
+======
+
+
+Introduction
+============
+Begin by reviewing basic shapes. Ask questions like, “How many sides does a square have?” “How about a triangle?”
+Also ask about basic note values. “How many half notes fit inside a whole note?” “How many quarter notes?”
+
+Part 1
+======
+
+
+A. Making a Square in Music Blocks
+==================================
+Start a new project and trash the default notes (Sol, Mi, Sol) and instrument (Guitar) in Music Blocks.
+Pull out a repeat block, a forward block, and a right block. By default their values should be 4, 100, and 90 respectively. You should keep their defaults.
+Have students guess what will happen when the program is run.
+The above is the code to generate a square. Below is the result (color may vary).
+Ask students how they would need to modify this program in order to create a triangle. Try making a triangle together and maybe a few other shapes.
+
+B. Divide by 360
+================
+Right as 90 (degrees) is a portion of a circle — specifically a quarter or a circle. Therefore, we can arrive at this same number by dividing by 4. This step may seem obvious, but it is very important in establishing the mathematical structure that we need to create unique shapes and rhythms automatically. By clicking on the division blocks, you can see the result printed at the top of the screen.
+Have students try dividing 360 by other numbers as well. Remind them that 360 are the degrees in a complete (i.e. “whole”) circle.
+Next, plug the division blocks into the square code from before.
+Now that we have this new structure for creating the square, let’s create a triangle.
+Then ask the students to make a pentagon (5 sides).
+At this point students should start to see the pattern. What two numbers are always the same? Why are they the same? Are they the same for any kind of shape? Is there another way to express the formula such that the numbers are always the same?
+
+C. Insert Box Here
+==================
+The box takes a number (or other value) and stores it for use later. The same number can be used multiple times. Since the number of repeats and the denominator for the right angle are the same for all these shapes, we can replace them with box.
+Now we just need to change the value for box to reliably generate shapes.
+Have students try different numbers for box to see the different results. Lower numbers provide the best results.
+
+D. Shape Creation Automation
+============================
+Starting from the box structure of their code, students have what they need to create more dynamic code. We can, for example, create a short snippet of code that creates shapes with 3, 4, 5, and 6 sides.
+
+E. Cyclic Representation of Whole Note
+======================================
+When introducing the concept of note value, I frequently like to start by drawing a circle on the board. I call the circle a “whole pizza”. When we cut the pizza in half, for example, we end up with two halves just like two half notes fill the same amount of time as a whole note.
+The next step for this lesson is to transition from sided-shapes to divisions of a circle (similar to dividing the pizza). We can do this with our current code by replacing the forward and right code with a single angle block. We will also need to move the 360/box division to the input for angle. Instead of going forward by 100, our radius will be 100.
+Lastly, by putting the movement inside of a note value drum block the movements will happen over time. By replacing the denominator for note value with box we can tie the length of the note with the divisions of the circle.
+The code snippet above also has an add to value block to change the color for each repeat. This helps us get more colorful output to help see the divisions.
+We can add some more visual elements such as changing color and the size of the radius at each repeat to better see how the circles are divided.
+Open the program at https://musicblocks.sugarlabs.org/index.html?id=1590350534007378&run=True
+
+F. Back to Note Values
+======================
+At this point in the lesson, we should bring it back to note values. We started with geometric shapes and ended with circles that are drawn over time with different note values. This is an important moment to ask some fundamental questions about note value.
+Students can be asked the following questions:
+Starting from “whole note” how can we figure out the length of other note values such as 1/2, 1/3, 1/4, 1/5, etc?
+Which note values are faster? Which are slower?
+Is there any way to create a longer note than a 1/1 (whole) note? Can you imagine what that would be?
+If a 1/2 is a “half note” what would be a 1/3 note? What can we call it? What is its relation to a whole note? (1/3 is a “half note triplet”, btw)
+
+G. Create!
+==========
+Encourage students to add to their “rhythm/shape generators” to create unique projects. The possibilities are endless.
+Example Teacher Project (using Pythagorean Tuning instead of Just): https://musicblocks.sugarlabs.org/index.html?id=1597842962357142&run=True
+
+Performance/Critique
+====================
+Have students discuss the relationship between shape and rhythm. You can start from the questions in the bullet list above.
+Have students create their own versions of the projects (either in class or at home) and show their new versions. What is unique? Does it explore something new with regard to note value?
+
+Materials
+=========
+Music Blocks software (Computer, up-to-date browser)
+If possible, a white board (or equivalent) to demonstrate the divisions of a whole note (e.g. as a pizza).
+
+Assessments
+===========
+Observe participation
+Do the students make the connection between note value and sides of a shape? Do they make the connection between divisions of a circle and divisions of a whole note?
+Are students able to apply their understanding of the concept to accurately problem solve unfamiliar note values such as 1/3 or 1/5?
+Are the students able to play or clap some of the rhythms? (divisions between 4 and 8 would be a good start)
+Long term assessment: Do students utilize the conceptual understanding to problem solve unfamiliar rhythms during performance (or when reading the rhythm on sheet music)?
+
+Music Blocks Lesson Plans
+=========================
+Lesson Plan: Structure and Form
+Lesson Plan: Building a Scale
+Lesson Plan: Chest, Snap, Clap with Phrase Maker (2 of 3)
+Lesson Plan: Colors of Intervals
+Lesson Plan: Creating Harmonics
+Lesson Plan: Dissonance to Consonance
+Lesson Plan: Exploring the Harmonic Series
+Lesson Plan: Frere Jacques with Phrase Maker (3 of 3)
+Lesson Plan: Geometry and Rhythms
+Lesson Plan: Hailstorm Music with Collatz Conjecture
+Lesson Plan: Interval Sudoku
+Lesson Plan: Make a Metronome
+Lesson Plan: Make Your Own Tuner
+Lesson Plan: Thirds and Sixths
+Lesson Plan: Twinkle Twinkle with Phrase Maker (1 of 3)
+Lesson Plan: Guitar Frets and Semi-tones
+Copyright 2019-2023 | CC BY-SA | Remake Music LLC
+

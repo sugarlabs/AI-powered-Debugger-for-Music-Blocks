@@ -1,0 +1,129 @@
+Title: Lesson Plan: Building a Scale – Music, Art, and Programming Family Learning Center
+URL: https://mapflc.com/lesson-plans/lesson-plan-building-a-scale/
+Age Range: 10-13
+Duration: 60 min
+
+Summary
+=======
+In this lesson students will create diatonic scales using fractions. Students will also learn about the Music Blocks “Pitch Staircase” Widget.
+
+Age:
+====
+10-13 years
+
+Lesson duration:
+================
+60 minutes
+Introduction: Ask students to think about other places where we have used fractions to represent a musical idea (e.g. note value). Ask students to describe how fractions helped represent the idea. (10 min)
+Students will be introduced (or reintroduced) to the Hertz block. (5 min)
+Students will use simple multiplication to transform Hertz block’s pitch. (15 min)
+Students will multiply against a fraction to transform Hertz block’s pitch in a more granular way. (10 min)
+Students will use the Pitch Staircase to create a Pure (Just) Intonation Scale. (10 min)
+Students will use their new Pure pitches to create a melody.
+
+Number of Students
+==================
+Up to 10.
+
+Rationale
+=========
+In music, fractions keep showing up. Note values, for example, are a fraction (i.e. quarter, half, whole). Pitch can also be represented as a fraction. The underlying idea is that relationships, proportions, and relativity are important in music.
+
+Objectives
+==========
+This lesson seeks to help the student explore the mathematical relationships between pitches in a diatonic scale.
+
+Lesson
+======
+
+
+Introduction
+============
+Ask students to think of other places where fractions have been a way to express a musical idea. By this lesson, students should have been exposed to note value as a fraction. Meter is also expressed as a fraction. Tell the students that they will be “building a musical scale” using fractions.
+
+Part 1
+======
+
+
+A. Expressing a Pitch with Hertz
+================================
+Start a new project and trash the default notes (Sol, Mi, Sol) and instrument (Guitar) in Music Blocks. Leave the Start Block.
+Pull out a Note Block from the Pitch Palette and a Hertz Block from the Pitch Palette.
+Set the Hertz block to 440. 440Hz is A in the 4th octave (a common tuning note) and is an easy number to conceptualize.
+Bring out a Note block and set it to La (or A) in the 4th octave in order to show the connection between the two pitches.
+The two pitches above are the same, represented in two different ways.
+Ask students to pull out a Multiplication block from the Number palette and set it to 1*2.
+Ask students to place the 440 Number block from the Hertz block into the Multiplication block so that it multiplies by 2. Ask students what they expect to happen? Will the pitch be Higher or Lower?
+Ask students to see if they can find the the same pitch as Hertz = 440*2 from their Solfege or Alphabet block (La or A set to octave 4) .
+Once the students have spent some time trying things out, or until they have arrived at the right answer, point out the multiplying a pitch in hertz by two gives you the octave above the original pitch.
+Ask students to try and find the changes needed in the Hertz block to arrive at A in the 6th Octave. Some students may first try 440*3, which is incorrect. Ask students to compare the pitches and use their ears.
+By this point students should be drawing a connection between octave and hertz. You may ask students to keep trying to find the next octave. You may also have students start from other pitches (by changing 440 to another value) or from A in a lower octave (e.g. Hertz = 110). Have students explore how multiplication effects the starting pitch. This Wikipedia Article has a helpful table of chromatic pitches of various octaves in Hertz: https://en.wikipedia.org/wiki/Pitch_(music).
+
+B. Hertz and Fractions
+======================
+In the previous section we explored octaves via multiplication. In the next section we will multiply the pitch in hertz against a fraction to achieve more granular control.
+First, ask students to pull out a Division block that they will use as a fraction.
+Next ask students to structure their code such that 440 is multiplied by the fraction.
+Now that we have this structure for multiplying 440 to a fraction, have students try some simple fractions such as 3/2, 4/3, and 5/4. It is important that students try to keep the numbers low and simple.
+By this point, students have worked at a very mathematical level for a while. This will have prepared them for Pitch Staircase. Pitch Staircase will make some of the work they have done in this first half of the lesson much simpler, and with visual output.
+Having accomplished the tough math during this first half of the lesson, they will better understand the output from Pitch Staircase, which exports pitch in the same representation. (Students who start from Pitch Staircase can often overlook the math of its output, which is most powerful as it can be manipulated in the code.)
+
+C. Pitch Staircase
+==================
+In this next section, have students pull out the Pitch Staircase from the Widgets palette.
+When you click on the Pitch Staircase block, it initiates the pitch staircase widget. Students should see something like the image below.
+Notice the numbers 3 and 2. These numbers represent the numerator and denominator of a fraction, respectively.
+Clicking on the pitch G results in a new D pitch above the G. Notice that the math has been applied (196*(3/2) equals 294).
+Have students try some of the values that they tried when multiplying hertz by fractions to the original pitch (G3 in this case).
+From here, you can have students complete the Pure (Just) Intonation scale by multiplying the fundamental pitch G3 in our case)
+Reference: https://en.wikipedia.org/wiki/Just_intonation
+Students should end up with the following.
+Next, have students save their pitches using the save button within the widget. The result is an Action block with Hertz blocks structured like the ones they created at the beginning of the lesson.
+
+D. Using Phrase Maker to Create Melodies
+========================================
+This last section will have students take the pitches they created and use them in the Phrase Maker to create melodies.
+Students will need to pull a new Phrase Maker, pull out all existing pitch blocks, and put their new “stair” Action block inside of it.
+Students should be given the liberty to create any melody that they like. The following is an example.
+
+G. Create!
+==========
+Students should be encouraged to save melodies they like (as action blocks) and string them together to create longer phrases. Students are also encouraged to try harmony and multiple Start blocks.
+
+Performance/Critique
+====================
+Have students showcase their creations for one another.
+Have students share anything new they noticed about pitches during the lesson.
+
+Materials
+=========
+Music Blocks software (Computer, up-to-date browser)
+
+Assessments
+===========
+Observe participation
+Do the students understand the concept of Hertz as a pitch (e.g. higher number is a higher pitch; lower number is a lower pitch)?
+Do the students understand the 2:1 relationship of octave?
+Do students understand the relative nature of pitches in a scale (i.e. that the pitches are all some ratio of one another)?
+Did the lesson result in more questions about fractions, relationships, and scales? (This is a good thing, to be explored more in future lessons.)
+
+Music Blocks Lesson Plans
+=========================
+Lesson Plan: Structure and Form
+Lesson Plan: Building a Scale
+Lesson Plan: Chest, Snap, Clap with Phrase Maker (2 of 3)
+Lesson Plan: Colors of Intervals
+Lesson Plan: Creating Harmonics
+Lesson Plan: Dissonance to Consonance
+Lesson Plan: Exploring the Harmonic Series
+Lesson Plan: Frere Jacques with Phrase Maker (3 of 3)
+Lesson Plan: Geometry and Rhythms
+Lesson Plan: Hailstorm Music with Collatz Conjecture
+Lesson Plan: Interval Sudoku
+Lesson Plan: Make a Metronome
+Lesson Plan: Make Your Own Tuner
+Lesson Plan: Thirds and Sixths
+Lesson Plan: Twinkle Twinkle with Phrase Maker (1 of 3)
+Lesson Plan: Guitar Frets and Semi-tones
+Copyright 2019-2023 | CC BY-SA | Remake Music LLC
+

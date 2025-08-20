@@ -1,0 +1,157 @@
+Title: Lesson Plan: Chest, Snap, Clap with Phrase Maker (2 of 3) – Music, Art, and Programming Family Learning Center
+URL: https://mapflc.com/lesson-plans/lesson-plan-chest-snap-clap-with-phrase-maker-2-of-3/
+Age Range: 5-7
+Duration: 40 min
+
+Summary
+=======
+This is based on a lesson I conducted for first and second graders to help familiarize them with Phrase Maker. This builds upon a lesson I created for the Free Software Foundation for a series of classes we conducted in the Boston Public Schools. Read more at https://musicblocks.net/2020/11/24/bringing-music-blocks-to-the-boston-public-schools/
+
+Age:
+====
+5-7 years
+
+Lesson duration:
+================
+40 minutes
+As a group, introduce “Chest, Snap, Clap” by demonstrating the rhythm yourself (Recommended for teachers to try the rhythm beforehand. See worksheet for notation. Video forthcoming). (5 min)
+Ask students to perform “Chest, Snap, Clap” by ear. (5 min)
+Ask students to transcribe what their hear together and facilitate their work. Then, introduce “Chest, Snap, Clap” handout. (10 min)
+Ask students to transcribe “Chest, Snap, Clap” with Phrase Maker. (5 min)
+Ask students to generate Action Blocks with Phrase Maker and create a loop in Start block. This should now perform “Chest, Snap, Clap” (5 min)
+Showcase, sharing, and reflection. (10 min)
+
+Number of Students
+==================
+Up to 10.
+
+Rationale
+=========
+“Chest, Snap, Clap” is a fun rhythm you can do on your body (no drums needed)! Also, since it is mainly eighth notes, it is pretty easy to transcribe. This lesson gives students an opportunity to transcribe what they hear with their bodies, on a whiteboard/chalkboard, and with Music Blocks’ Phrasemaker.
+“Chest, Snap, Clap” introduces one unique challenge for transcribing with Phrase Maker over “Twinkle, Twinkle” Lesson Plan. Transcribing “Chest, Snap, Clap” requires specifying the rhythm. “Chest, Snap, Clap” also introduces how multiple drum blocks can be used in the Phrase Maker, but the focus of this lesson is exploring rhythm.
+
+Objectives
+==========
+To explore drums-over-time, graph literacy, and rhythmic values using “Chest, Snap, Clap” with Phrase Maker.
+
+Handouts
+========
+Handouts to facilitate the lesson. PDF and original Open Document file below.
+
+Lesson
+======
+
+
+Introduction
+============
+Lead students in performing “Chest, Snap, Clap”. First demonstrate the rhythm on your own body and have students mimic. Say the motions out loud to help facilitate the learning. Ask questions to help students better recognize the patterns.
+
+Part 1
+======
+
+
+A. Starting the Lesson with a Demonstration
+===========================================
+Demonstrate “Chest, Snap, Clap” yourself. Make sure that you have practiced the rhythm beforehand.
+(Video of teacher demonstrating the “Chest, Snap, Clap” rhythm will be added here at a later time.)
+
+B. Ask Students to Mimic “Chest, Snap, Clap” and Transcribe
+===========================================================
+
+
+Mimicking on the Body
+=====================
+After demonstrating the rhythm yourself, ask students to mimic the rhythm themselves.
+Tip: Many kids do not yet know how to snap. That is ok! Simply ask them to do the motion with the fingers the best they can, even if it does not make a sound.
+Often students need a little bit of prompting. I like to start with the question, “What is the first thing that I did?” The expected answer is “Chest” or “Hit your chest” or “Thump your chest”. From there, I recommend that you repeat the demonstration and intermittently ask the following questions to help students better recognize the patterns.
+Recommended Questions:
+What is the first thing I did? The second? The third?
+(Focus on the first half) Are there any patterns? Does anything repeat?
+Are there any patterns in the order of things that happen?
+(Focus on the second half) Does anything repeat?
+How do the first half differ from the second half?
+
+Transcribing the Rhythm Together
+================================
+Note: Usually before class, I will prepare a grid on the whiteboard/chalkboard in order to have a framework for students to start. Below is a picture of the before and after of the grid. The “before” was prepared before class began.
+Prepared Grid Before Class
+Chest, Snap, Clap as Completed with Students
+Next, ask students to help you transcribe “Chest, Snap, Clap”. There are two different ways I have done this in the classroom:
+Draw a grid on the board and have students fill it in together. (See images above)
+Use blank paper folded into 4×2 squares and having students fill it in. (See file below)
+However you decide to guide students through the transcription process, the point is to help facilitate students in the transcription process. In other words, “How do we take what we hear and commit it to paper?”
+Once students have written out the rhythm, you should ask them to perform it again by reading the transcription.
+
+C. Transcribe Rhythm with Phrase Maker
+======================================
+Next, move students to their computers to transcribe “Chest, Snap, Clap” with Phrase Maker.
+In order to help students focus entirely on the task at hand, I recommend that you prepare the computers with the starting template project available online at https://musicblocks.sugarlabs.org/index.html?id=1636143446002162&run=True with .tb file below.
+
+Transcribe First Half
+=====================
+First, ask students to initiate the Phrase Maker by clicking on it.
+Blank Phrase Maker (First Half)
+Complete Phrase Maker (First Half)
+
+Transcribe Second Half
+======================
+Next, explain to the students that they have a challenge to figure out the rhythm for the second half. The handout linked to above helps facilitate this inquiry. Have students, for example, compare the number of eighth notes from the first half to the number of eighth notes in the second half. This is also a good opportunity to explore how the two sixteenth notes at the end of the second half are derived.
+Blank Phrase Maker for Second Half
+Complete Phrase Maker for Second Half
+The images below are the rhythm blocks for the first and second halves. Notice the difference between the rhythms. For the rhythm blocks, remember that the top number is “How many notes?” and the bottom is “What kind (of note value)?”
+Eight Eighth Notes
+Seven Eighth Notes and Two Sixteenth Notes
+
+D. Putting in All Together
+==========================
+The final challenge for students is to export their transcriptions as Action blocks and put it into their script.
+Export Action Blocks from Phrase Maker
+Take Generated Action Blocks (from Action palette) and put them into into Start block.
+Take Repeat block from Flow palette and use it in your script.
+Once students have this completed, there projects will perform the “Chest, Snap, Clap” Rhythm. At this point, I have sometimes enjoyed a dance with my students.
+
+E. Extensions
+=============
+Now that students have been able to successfully transcribe the “Chest, Snap, Clap” rhythm, they should be encouraged to remix the rhythm and make it their own.
+Make a unique rhythm by changing the drums.
+Click the name of drums in Note blocks to choose a new drum. This will change the sound of the overall rhythm.
+
+Performance/Critique
+====================
+Have students perform “Chest, Snap, Clap” on their bodies.
+Have students create their own versions of rhythms (see “extensions”) and share their remixes.
+The class can listen to other drum patterns that have a “backbeat” feel. Check out Rock and Blues music in 4/4 time for more examples.
+
+Materials
+=========
+Music Blocks software (Computer, up-to-date browser)
+Printed handouts (linked to above)
+
+Assessments
+===========
+Observe participation
+Do students express rhythm (drums over time) in Phrase Maker?
+Do the students action blocks?
+Do the students express the two-part form with their action blocks?
+What remixing choices did students make?
+
+Music Blocks Lesson Plans
+=========================
+Lesson Plan: Structure and Form
+Lesson Plan: Building a Scale
+Lesson Plan: Chest, Snap, Clap with Phrase Maker (2 of 3)
+Lesson Plan: Colors of Intervals
+Lesson Plan: Creating Harmonics
+Lesson Plan: Dissonance to Consonance
+Lesson Plan: Exploring the Harmonic Series
+Lesson Plan: Frere Jacques with Phrase Maker (3 of 3)
+Lesson Plan: Geometry and Rhythms
+Lesson Plan: Hailstorm Music with Collatz Conjecture
+Lesson Plan: Interval Sudoku
+Lesson Plan: Make a Metronome
+Lesson Plan: Make Your Own Tuner
+Lesson Plan: Thirds and Sixths
+Lesson Plan: Twinkle Twinkle with Phrase Maker (1 of 3)
+Lesson Plan: Guitar Frets and Semi-tones
+Copyright 2019-2023 | CC BY-SA | Remake Music LLC
+

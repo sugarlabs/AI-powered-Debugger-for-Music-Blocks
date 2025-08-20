@@ -1,0 +1,140 @@
+Title: Lesson Plan: Colors of Intervals – Music, Art, and Programming Family Learning Center
+URL: https://mapflc.com/lesson-plans/lesson-plan-colors-of-intervals/
+Age Range: 10-12
+Duration: 60 min
+
+Summary
+=======
+In this lesson students will explore both the qualitative “feel” of different intervals as well as the math. Scale Degree will be reviewed as it is necessary to have the reference of scale degree when discussing interval. Teachers (and students) are encouraged to perform (either on instruments or via the given videos) examples in order to establish the sound and feel of these intervals.
+
+Age:
+====
+10-12 years
+
+Lesson duration:
+================
+60 minutes (with extensions that can extend over two additional 60 minute sessions)
+Introduction: “Degrees and Movement” (10 min)
+Perform example intervals and engage students to document the “feeling” of each (10 min)
+Experiment with intervals (Part 1, a-c) via “scalar interval” block (30 min)
+Project sharing and reflection (Part 2) (10 min)
+Extension 1
+Review (if continued on another day) (10 min)
+Explore patterning of intervals as sequences on instruments and on Music Blocks (Part 1, d-e) (30-40 min)
+Project sharing and reflection (Part 2) (20 min)
+
+Number of Students
+==================
+Up to 10.
+
+Rationale
+=========
+Intervals are important to the sound and feeling of music. In technical terms, we have consonant and dissonant intervals and identifying the difference requires some math. Also, intervals of the same value—regardless of their starting point—have certain qualitative features which are important to explore in order to establish a basis for students to create a creative musical vocabulary.
+
+Objectives
+==========
+Students will explore different intervals and try to identify—in qualitative terms—what the sound and feel of each interval is.Students will also learn some of the math behind the intervals.
+
+Lesson
+======
+
+
+Introduction
+============
+Begin by asking students to sit in a circle and explain that in today’s lesson they are going to learn about intervals. Maybe ask the group what they think of when they hear the word “interval”.
+Note: For this lesson, it is important to explore both the mathematical expression as well as the qualitative expression of intervals. Suggestions for how to introduce both are below. They need not be done in this order, and they need not be done during a single breath of time (i.e. one could be done after a break, after some work on the computer).
+1. (mathematical) Students begin by drawing a baseball field on paper (with diamonds). Ask students to identify “Which diamond is first base, which is second, which is third, and where is home?” Ask questions to exercise their ability to identify distances such as “If one person is standing at first base, and another at third, how many bases apart are they?” Also, ask questions to explore the concept of zero, such as “If home base was a number, what number would it be?” You may also ask, “After third base, what base does the athlete go (return) to?” Lastly, you might have the students explore creating a baseball field with more than four bases.
+2. (qualitative) Play different intervals on an instrument of the teachers choice, preferably simultaneously (e.g. piano, guitar, violin, etc), and ask the students to describe each interval in words. The first goal for the teacher is to help students come up with descriptions for “consonant” and “dissonant” intervals, so the teacher should be mindful to switch between the two without an overemphasis on a single type. Some students may need some prompting with questions like:
+Does this sound happy, sad, or something else?
+Does this sound like the beginning, middle, or end of something?
+If I were a [flower, cloud, or a dinosaur, earthquake] which of these two intervals best describes me? (play both a consonant and dissonant interval of your choice)
+
+Part 1
+======
+
+
+A. Scalar Interval in Music Blocks
+==================================
+Ask the students to drag the Scalar Interval from the Intervals palette and wrap it around a note (or melody).
+Have them guess as to what it might do.
+Have them try different numbers.
+Have them write down some descriptions of each number. (e.g. “2 sounds like ….”)
+Have them create a short melody that utilizes “Scalar Interval”.
+Click on example below to hear the result of the code above.
+Click on example below to hear the result of the code for 2nds and 6ths above.
+Ask students to create and compare the two examples above. How would they describe the 2nds? How would they describe 6ths? How do they contrast? How do they sound similar? What kind of effect might each one be used for?
+
+B. Pedal Point
+==============
+A pedal point is a tone that does not move while pitches move around it. It can be very useful to hear the variation of colors created when different intervals occur against it. Music Blocks is a great tool for expressing this concept.
+
+C. Interval Generator
+=====================
+Music Blocks has interactive tools that can make interval creation responsive and dynamic. Consider the following example, which might be a useful tool for exercising one’s ability to identify pitches–or as an instrument in and of itself.
+
+D. Dissonance to Consonance
+===========================
+For scalar interval in a seven-note diatonic system 2nds, 4ths, and 7ths are considered dissonant while unisons, 3rds, 5ths, 6ths (plus or minus any number of octaves) are considered consonant. Moving from dissonance to consonance can create a feeling of forward momentum to your music. Just like a good story has moments of tension that are later resolved, good music also introduces tension as dissonance, and resolves it later as consonance.
+Try creating projects that do the following:
+Alternate from 4th to 3rd, 4th to 3rd, etc
+Alternate from 7th to 6th, 7th to 6th, etc
+Alternate from 2nd to 3rd (upward), 2nd to 3rd, etc
+Alternate from 7th to 8th (upward), 7th to 8th, etc.
+Try other combinations
+Note: While students try combinations, ask them to keep track of descriptions for each as well as which ones are their favorite.
+
+E. 5th to 6th Climb
+===================
+Both 5ths and 6ths are considered consonant, but 6ths are generally considered a little more colorful than (perfect) 5ths. Just try a few to verify. When moving two pitches a 5th apart upward it can sound a little bland to move both pitches in parallel motion at the same time. One trick that composers use is to stagger the “climb”. In Music Blocks, you can create a program that generates a 5-6 sequence.
+Try the 5-6 sequence generator: https://musicblocks.sugarlabs.org/index.html?id=1732217091867496&run=True
+
+Part 2
+======
+
+
+Open-ended Workshop
+===================
+Encourage students to utilize their smaller creations to create a bigger project, building upon everything that they have learned so far.
+
+Performance/Critique
+====================
+Have students perform their composition(s) for the group
+Engage in a discussion about intervals: Which intervals occur in your creation? Where are the dissonances? Where are the consonances? How do the dissonances resolve (if at all)? If the dissonances do not resolve, how does that impact the effect of the music?
+
+Extras
+======
+Have students export their creations via lilypond software and perform on their instrument(s).
+
+Materials
+=========
+Music Blocks software (Computer, up-to-date browser)
+Paper and/or notebooks for the kids to write their findings down
+
+Assessments
+===========
+Observe participation
+Do the projects use “scalar interval”?
+To what extent do the students thoughtfully use dissonances and consonances?
+Are the students able to relate the sequences to any music they know (and perform)?
+(If the students perform their music on instruments) Are the students expressive in their performance?
+
+Music Blocks Lesson Plans
+=========================
+Lesson Plan: Structure and Form
+Lesson Plan: Building a Scale
+Lesson Plan: Chest, Snap, Clap with Phrase Maker (2 of 3)
+Lesson Plan: Colors of Intervals
+Lesson Plan: Creating Harmonics
+Lesson Plan: Dissonance to Consonance
+Lesson Plan: Exploring the Harmonic Series
+Lesson Plan: Frere Jacques with Phrase Maker (3 of 3)
+Lesson Plan: Geometry and Rhythms
+Lesson Plan: Hailstorm Music with Collatz Conjecture
+Lesson Plan: Interval Sudoku
+Lesson Plan: Make a Metronome
+Lesson Plan: Make Your Own Tuner
+Lesson Plan: Thirds and Sixths
+Lesson Plan: Twinkle Twinkle with Phrase Maker (1 of 3)
+Lesson Plan: Guitar Frets and Semi-tones
+Copyright 2019-2023 | CC BY-SA | Remake Music LLC
+

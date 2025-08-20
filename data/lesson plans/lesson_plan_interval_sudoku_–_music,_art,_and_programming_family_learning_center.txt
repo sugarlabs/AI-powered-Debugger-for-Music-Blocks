@@ -1,0 +1,125 @@
+Title: Lesson Plan: Interval Sudoku – Music, Art, and Programming Family Learning Center
+URL: https://mapflc.com/lesson-plans/lesson-plan-interval-sudoku/
+Age Range: 7-13
+Duration: 60 min
+
+Summary
+=======
+In this lesson students will explore different types of contrapuntal motion via the n^th modal pitch block
+
+Age:
+====
+7-13 years
+
+Lesson duration:
+================
+60 minutes
+Introduction: Ask the group “What do you think when you think of the word interval?” “What about with music? What is a musical interval?” (10 min)
+Introduce n^th modal pitch by itself. Have students explore inputting different numbers. (10 min or skip if kids have used n^th modal pitch before)
+Have students open the pre-made “interval sudoku” project. Demonstrate the simpler types of motion (i.e. parallel, contrary, oblique) given two interactive pitches. (10 min)
+Have students try these motions on their own. (5 min)
+Demonstrate more complex patterning of the simpler types (e.g. 5-6 sequence to break up ascending parallel fifths). (10 min)
+Have students remix the demo version and/or find patterns and sequences that interest them.
+
+Number of Students
+==================
+Up to 10.
+
+Rationale
+=========
+The introduction of an additional pitch adds new possibilities to the sound. The pitches interact in ways called counterpoint. One pitch can stay still while the other moves, the two pitches can move in the same direction, or they can move in opposite directions. This may seem simple, but it is the starting point for an explosion of possibilities in the sound.
+
+Objectives
+==========
+The goal is to give students a few important compositional tools (and judgement) that they will inevitably need to consider when creating music. Also, the vocabulary of terms should be a goal of the class as the terminology will help students express themselves as well as make musical decisions.
+
+Lesson
+======
+
+
+Introduction
+============
+Review: It is important, if it has not been done so already, that students understand how n^th modal pitch block works. This way of expression is probably unfamiliar to musicians, but it allows us to express pitch as a number, and with an index of zero, which allows for a limitless ability to traverse the pitches any mode.
+Help students identify 0 as C (the first scale degree), 1 as D, and -1 as B (octave before) in C major. Ask students to guess what the other numbers will result in.
+Interval: Ask the group about intervals “What do you think when you think of the word interval?” “What about with music? What is a musical interval?”
+
+Part 1
+======
+
+
+A. Possibilities with two points
+================================
+With two n^th modal pitch blocks the user can control two points. One way to make this interactive is by tying cursor x and y in the following manner:
+Below is the Music Blocks code for the above (you can copy and paste into MB with ctl-v):
+The result will be a pulse of various intervals, but without a way to predict the sound before it plays. Asks students to open the grid.
+After the students have experimented with the grid open for a minute or two, asks students to try just going up and down, then just left to right. Finally ask students to move diagonally. What do they hear? How can they describe what they hear?
+
+B. Interval Sudoku
+==================
+The simple example is a nice way to begin to see the simplest structure of the code, but it does not help us predict and experiment with different intervals in a useful way. Ask students to open the following project.
+Using the project above, have students try up-down, left-right, and diagonal motion again and observe the different numbers.
+
+B. Oblique, Parallel, and Contrary
+==================================
+By having students move diagonally, they will always get parallel motion. The bottom example is parallel unison (both pitches are exactly the same).
+The bottom example is also parallel motion. This is known in music as “parallel thirds” and is known for being a pleasant sound.
+Moving up-down gives us oblique motion. One voice stays the same while the other moves.
+Moving left-right is another way to get oblique motion.
+Finally, we have contrary motion. See below:
+
+C. Change our Reference
+=======================
+By simply adding to just x or just y we can change our reference.
+
+D. Mixing it up
+===============
+Music only uses the aforementioned motion in brief succession. Typically, the motion is broken at some point. Here are some simple, yet common, ways to mix things up.
+For example, let’s take fifths.
+A very common way of moving up in pitch with parallel fifths is to break them up by going to the sixth in between. Going from left-bottom to right-top, have the students try the following.
+4-5-4-5-4-5 etc from left-bottom to right-top. How does the sound differ from plain parallel fifths?
+Another way to mix things up is to try 2nd-3rd motion such as the following (from top-right to bottom left):
+TODO: Replace image. Should have ones and twos.
+There are many other options such as the following.
+
+E. Arpeggios
+============
+It is fun to skip notes and create arpeggios. The following outlines each chord as well as giving us a parallel motion and breaking parallel fifths by adding sixths.
+And breaking up the parallels with the sixths (number 5)
+
+Performance/Critique
+====================
+Have students share some patterns that they like.
+Have students comment on other’s combinations.
+
+Materials
+=========
+Music Blocks software (Computer, up-to-date browser)
+Instruments, if possible
+
+Assessments
+===========
+Observe participation
+Do the students pick up the terminology oblique, parallel, and contrary (or the general concept)?
+Are students able to hear the different types of motion?
+Are the students coming up with aesthetic decisions about what they like?
+
+Music Blocks Lesson Plans
+=========================
+Lesson Plan: Structure and Form
+Lesson Plan: Building a Scale
+Lesson Plan: Chest, Snap, Clap with Phrase Maker (2 of 3)
+Lesson Plan: Colors of Intervals
+Lesson Plan: Creating Harmonics
+Lesson Plan: Dissonance to Consonance
+Lesson Plan: Exploring the Harmonic Series
+Lesson Plan: Frere Jacques with Phrase Maker (3 of 3)
+Lesson Plan: Geometry and Rhythms
+Lesson Plan: Hailstorm Music with Collatz Conjecture
+Lesson Plan: Interval Sudoku
+Lesson Plan: Make a Metronome
+Lesson Plan: Make Your Own Tuner
+Lesson Plan: Thirds and Sixths
+Lesson Plan: Twinkle Twinkle with Phrase Maker (1 of 3)
+Lesson Plan: Guitar Frets and Semi-tones
+Copyright 2019-2023 | CC BY-SA | Remake Music LLC
+

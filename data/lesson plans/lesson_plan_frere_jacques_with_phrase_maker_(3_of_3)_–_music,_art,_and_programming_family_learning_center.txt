@@ -1,0 +1,112 @@
+Title: Lesson Plan: Frere Jacques with Phrase Maker (3 of 3) – Music, Art, and Programming Family Learning Center
+URL: https://mapflc.com/lesson-plans/lesson-plan-frere-jacques-with-phrase-maker-3-of-3/
+Age Range: 5-7
+Duration: 40 min
+
+Summary
+=======
+Based on a lesson I had with 1st and 2nd graders. This helped the students get their bearings with the Phrase Maker using a familiar tune.
+
+Age:
+====
+5-7 years
+
+Handouts:
+=========
+Please see the PDF and original file below.
+
+Lesson duration:
+================
+40 minutes
+As a group, sing through Frere Jacques (a.k.a. Are you Sleeping). (10 min)
+Play Frere Jacques on Bell Sets (i.e. glockenspiel) using handouts. (10 min)
+Review Phrase Maker and how to export action blocks. (10 min)
+Ask students to change it up to make their own form. (10 min)
+Change the notes of the stacks to make your own melodies within the form. (10 min)
+Showcase, sharing, and reflection. (10 min)
+
+Number of Students
+==================
+Up to 10.
+
+Rationale
+=========
+Continuation of lessons to explore transcribing music with Phrase Maker. If your students are unfamiliar with Phrase Maker, you are encouraged to start with Twinkle Twinkle with Phrase Maker lesson.
+
+Objectives
+==========
+These lessons were created to help early readers (1st and 2nd grade) students better understand how to better understand Phrase Maker. Specifically, students will learn how to program the desired rhythm into the Phrase Maker Widget.
+
+Lesson
+======
+
+
+Introduction
+============
+First, perform Frere Jacques (i.e. “Are You Sleeping”) for students. Next, invite students to sing with you (both with lyrics and with Solfege). Finally, ask students to read from the handouts and perform Frere Jacques on instruments such as bellsets.
+Note: Frere Jacques is a round, but that is not the focus of this lesson plan. For a lesson plan focused on musical rounds, please see “Canon” lesson plan written by Walter Bender.
+
+Part 1
+======
+
+
+A. Starting the Lesson
+======================
+Once students have had the opportunity to perform Frere Jaques in various ways, move to Music Blocks on the computers.
+Ask students to take the Phrase Maker from the Widget Palette. You will need to have, at least, pitches “Do”, “Re”, “Mi”, “Fa”, “Sol”, and “La”.
+Note: Alternatively, you can pull out the “C Major” Phrase Maker from the Widget Palette, which will have all the same notes as a one-octave bellset.
+
+B. Transcription
+================
+Ask students to use Phrase Maker to transcribe each of the four parts of Frere Jacques. By now, they will have sang the melody and performed the melody on bellsets. Students should also have access to the handout (or it should be displayed on a screen or projector). The goal for the students is to create the following four melodic fragments with the Phrase Maker.
+First Part of Frere Jacques on Phrase Maker
+Second Part of Frere Jacques on Phrase Maker
+Third Part of Frere Jacques on Phrase Maker
+Last Part of Frere Jacques on Phrase Maker
+
+C. Programming the Rhythm
+=========================
+The next step is to ask students to export Action blocks for each of the four parts of Frere Jacques.
+Once students have all four parts exported as Action blocks, please have them put it into the Start block to create a script.
+
+D. Extensions
+=============
+Just as with the two other lessons prior in this series, encourage students to remix the notes within the Action blocks themselves. Also, encourage them to experiment with the order of the action blocks.
+Also, the Action blocks they have at the end of this project would help them to create a complete canon if they want. The lesson plan for exploring canons is available here. Many variations of Frere Jacques are available on the Music Blocks Planet as well.
+
+Performance/Critique
+====================
+Have students discuss how Phrase Maker works. What steps are needed to add extra notes, change pitches, and change rhythms?
+Have students create their own versions of the projects (either in class or at home) and show their new versions. What is unique?
+
+Materials
+=========
+Music Blocks software (Computer, up-to-date browser)
+Handouts (linked to above)
+
+Assessments
+===========
+Observe participation
+Do the students action blocks?
+What remixing choices did students make?
+
+Music Blocks Lesson Plans
+=========================
+Lesson Plan: Structure and Form
+Lesson Plan: Building a Scale
+Lesson Plan: Chest, Snap, Clap with Phrase Maker (2 of 3)
+Lesson Plan: Colors of Intervals
+Lesson Plan: Creating Harmonics
+Lesson Plan: Dissonance to Consonance
+Lesson Plan: Exploring the Harmonic Series
+Lesson Plan: Frere Jacques with Phrase Maker (3 of 3)
+Lesson Plan: Geometry and Rhythms
+Lesson Plan: Hailstorm Music with Collatz Conjecture
+Lesson Plan: Interval Sudoku
+Lesson Plan: Make a Metronome
+Lesson Plan: Make Your Own Tuner
+Lesson Plan: Thirds and Sixths
+Lesson Plan: Twinkle Twinkle with Phrase Maker (1 of 3)
+Lesson Plan: Guitar Frets and Semi-tones
+Copyright 2019-2023 | CC BY-SA | Remake Music LLC
+

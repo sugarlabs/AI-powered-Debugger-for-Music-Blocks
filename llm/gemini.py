@@ -6,7 +6,7 @@ import time
 try:
     api_key = st.secrets.get("GEMINI_API_KEY")
     if not api_key:
-        st.error("GEMINI_API_KEY not found in Streamlit secrets.")
+        st.error("GEMINI_API_KEY not found in secrets.")
         st.stop()
     genai.configure(api_key=api_key)
 except Exception as e:
@@ -15,7 +15,7 @@ except Exception as e:
 
 MODEL_NAME = "models/gemini-1.5-flash"
 MAX_RETRIES = 3
-TIMEOUT = 30 
+TIMEOUT = 30
 
 @retry.Retry(
     initial=1.0,
@@ -69,7 +69,6 @@ def safe_ask_gemini(prompt: str) -> str | None:
             time.sleep(1 * (attempt + 1))
             return None
     return None
-
 
 if __name__ == "__main__":
     st.title("Gemini API Test")

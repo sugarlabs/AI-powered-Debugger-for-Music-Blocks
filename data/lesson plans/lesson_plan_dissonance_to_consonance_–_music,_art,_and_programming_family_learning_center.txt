@@ -1,0 +1,129 @@
+Title: Lesson Plan: Dissonance to Consonance – Music, Art, and Programming Family Learning Center
+URL: https://mapflc.com/lesson-plans/lesson-plan-dissonance-to-consonance/
+Age Range: 7-13
+Duration: 60 min
+
+Summary
+=======
+This lesson builds upon the “thirds and sixths” lesson plan with motions into thirds and sixths (consonant intervals) from other (dissonant) intervals.
+
+Age:
+====
+7-13 years
+
+Lesson duration:
+================
+60 minutes
+Introduction: Discuss “tension” and “resolution”. How do stories use tension and resolution? (5 min)
+Review: Review 3rds and 6ths. (5 min)
+Motion into 3rds and 6ths: Use review material and ask how we can move to 3rds and 6ths from above and below. (5 min)
+Create a simple script to move from a 4th to a 3rd. (10 min)
+Create an action that moves us up the scale, while using the 4th to 3rd motion. (10 min)
+Modify the script to move from 2nd to 3rd instead. (5 min)
+Copy the scripts and create a way to preview all the possible ways to move to 3rds and 6ths from above and below. (10 min)
+Have students share their projects and discuss which combinations they like and why. (10 min)
+
+Number of Students
+==================
+Up to 10.
+
+Rationale
+=========
+In music, thirds and sixths are very common. However, without explicit instruction students often do not recognize where they occur (even in music they may already be performing well). This lesson will introduce thirds and sixths to help young musicians to recognize them when they hear and read them.
+
+Objectives
+==========
+This lesson seeks to help students hear dissonant to consonant motion.
+
+Lesson
+======
+
+
+Introduction and Review
+=======================
+One way that I like to explain the motion from dissonance to consonance is this: Imagine a story. Stories typically have places of tension, which function very similarly to musical dissonance. When the tension is resolved, that functions very similarly to how a musical dissonance resolves to a consonance.
+Ask students to come up with some ideas for a story. What would be something in the story that has tension, something that leaves the listener wondering what will happen next? Then ask students to think of how it would be resolved.
+The focus for this lesson is the motion into 3rds and 6ths. Therefore, it would be helpful to review where 3rds and 6ths are on (single octave) pitch circle like the one below. Ask students what are all the ways we can approach the “3rd” and the “6th” by only moving up or down by one.
+For teachers working online (screen sharing), or who otherwise want to use Music Blocks as their whiteboard, you can use the following snippet of code.
+The above is something asked of the students from the previous lesson on thirds and sixths. You could have students circle “3” (for 3rd) and “6” (for 6th). These are our consonant intervals. Then ask how they can move to these places by only moving one. The starting places are the dissonant intervals, the places of tension.
+
+Part 1
+======
+
+
+A. Exploring fourth to third
+============================
+First start with some simple questions to review how we use Scalar Interval to get to a 4th and a 3rd.
+Ask students to find a fourth above tonic. Ask, “How many up do we need to move to get to a forth?” (Answer: We need to go up “3”)
+Ask students to find a third above tonic. Ask, “How many up do we need to move to get to a third?” (Answer: We need to go up “2”)
+The following is the Music Blocks code for moving from a scalar 4th to a scalar 3rd. Ask students to create the following.
+Notice that the affected pitch remains the same (i.e. both pitches are “do”). It is important that both pitches are the same otherwise the “resolution” will lose context with regard to the tension set up before it.
+
+B. 4th-3rd Moving Up
+====================
+The 4th to 3rd motion is nice, but it is better to move around the scale to “taste” the different possibilities. Below is an explicit spelling of 4th to 3rd starting from “Do” and then 4th to 3rd starting from “Re”.
+Like before, it is important that for the tension (4th) and resolution (3rd) to have the same reference pitch inside (before moving up).
+
+C. Using Scalar Step to Automate Movement
+=========================================
+Ask students if they can think of another way to move up that automates the process of moving up. One way is to use the “scalar step” block.
+Students can try the following to step the next pitch up.
+If the second note (i.e the one with the 3rd) were to also have a scalar step of +1 then the reference point for the intended resolution would change which ruins the resolution. Ask students to try and think of how they can keep the second pitch the same without moving it up (or down).
+We can now use scalar step to move up automatically. The following has an action block (corresponding to the block spelled out above) that repeats 7 times. Because we use the scalar step block the first time, it will change its reference pitch every first iteration (when playing the fourth).
+If we want to go up the entire scale to hear the 4th-3rd motion for all the possible notes in the scale, then we can use the “mode length” block. This will allow us to repeat as many pitches as their are in the scale (regardless the scale).
+
+D. 2nd to 3rd
+=============
+The following is moving from 2nd to 3rd (movement to the 3rd from below) with same structure as before.
+The structure to move from 2nd to 3rd is the same as 4th to 3rd motion. For 4th to 3rd, we are moving to the 3rd from above. For 2nd to 3rd, we are moving to the 3rd from below. In both cases we are starting from intervals of tension and moving into intervals of resolution.
+
+G. All possibilities! (Advanced)
+================================
+Below are all the possibilities. This may be a bit advanced for some groups of students, but it is nice to do if you have the time and a patient group of students. I had good success with the following with a middle school student, but I did not continue this far with a group of 3rd graders.
+All ascending. By creating a script like the above, students can hear all possible motions into both 3rds and 6ths. As the play their code, ask them to actively listen to the quality of the sound. The goal is for the students to become sensitive to the different possibilities so that they can use them in their own compositions later.
+Next, we can prepare to go both up and down by putting all of the ascending possibilities inside their own block.
+Once students have the formula for ascending, it is relatively simple to go down. The overarching structure is below.
+Students will need to copy their action blocks created for going up, and then modify them to go down. It is also important to rename the motion as well (e.g. “down” for all the ones going down and “up” for the ones going up).
+Below is a step-by-step of the entire creation.
+Once students have this script that runs through all the possibilities, ask students to find interval combinations that they like so that they may use them in their own compositions later. The goal is to get kids listening and making aesthetic decisions.
+
+Performance/Critique
+====================
+Have students showcase their creations for one another.
+Have students share anything new they noticed about consonance and dissonance, tension and resolution, and thirds and sixths during the lesson.
+
+Materials
+=========
+Paper and pencils for each student
+Music Blocks software (Computer, up-to-date browser)
+
+Assessments
+===========
+Observe participation
+Do the students’ creations resolve to 3rds or 6ths (and of the same pitch as the tension)?
+Are students finding combinations that they like (so that they may use them for future compositions)?
+
+Student/Teacher Projects
+========================
+https://musicblocks.sugarlabs.org/index.html?id=1601479893965676&run=True is a teacher project that randomizes the melodic movement of the notes, but always has a 4-3 motion.
+
+Music Blocks Lesson Plans
+=========================
+Lesson Plan: Structure and Form
+Lesson Plan: Building a Scale
+Lesson Plan: Chest, Snap, Clap with Phrase Maker (2 of 3)
+Lesson Plan: Colors of Intervals
+Lesson Plan: Creating Harmonics
+Lesson Plan: Dissonance to Consonance
+Lesson Plan: Exploring the Harmonic Series
+Lesson Plan: Frere Jacques with Phrase Maker (3 of 3)
+Lesson Plan: Geometry and Rhythms
+Lesson Plan: Hailstorm Music with Collatz Conjecture
+Lesson Plan: Interval Sudoku
+Lesson Plan: Make a Metronome
+Lesson Plan: Make Your Own Tuner
+Lesson Plan: Thirds and Sixths
+Lesson Plan: Twinkle Twinkle with Phrase Maker (1 of 3)
+Lesson Plan: Guitar Frets and Semi-tones
+Copyright 2019-2023 | CC BY-SA | Remake Music LLC
+

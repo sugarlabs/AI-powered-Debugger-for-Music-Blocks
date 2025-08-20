@@ -1,0 +1,137 @@
+Title: Lesson Plan: Guitar Frets and Semi-tones – Music, Art, and Programming Family Learning Center
+URL: https://mapflc.com/lesson-plans/lesson-plan-guitar-frets-and-semi-tones/
+Age Range: 10-12
+Duration: 60 min
+
+Summary
+=======
+In this lesson students will explore the relationship between frets on an fretted instrument (e.g. guitar, ukulele, and mandolin) and semi-tones via the “pitch number” block in Music Blocks.
+
+Age:
+====
+10-12 years
+
+Lesson duration:
+================
+60 minutes
+Introduction: “What is a half-step (semitone)?” (10 min)
+Perform Romanza and sing the numbers of the frets. Have students sing the fret numbers as well. (10 min)
+Ask students to transcribe the melody to Romanza using Pitch Number blocks. (10 min)
+Use the Input block to create a “guitar app” for a single string. (10 min)
+Introduce the TAB for Smoke on the Water. Go over briefly how to read TAB. Have students read and play this melody with their new guitar apps. (10 min)
+Wrap up: Have students share what they learned from creating their “guitar apps”. Have them perform melodies for each other. (10 min)
+Note: Approx. 30 minutes of extensions also included in this lesson plan.
+
+Number of Students
+==================
+Up to 10.
+
+Rationale
+=========
+The octave can be divided into 12 pitches called “semi-tones” or “half-steps”. By having all twelve pitches, you gain access to all 12 possible notes as well as all of the scalar notes (i.e. Do, Re, Mi, Fa, Sol, La, Ti) for all keys.
+A fretted instrument, like a guitar or an ukulele, is a good instrument for presenting this concept because each fret is a half-step (semitone) apart.
+
+Objectives
+==========
+Students should be able to read simple (one string) tablature for fretted instruments. They should be able to create simple melodies with this representation. As well as possible, a modal shape should be chosen and defined by the student (so that their music is not just chromatic).
+
+Lesson
+======
+
+
+Introduction
+============
+Begin by asking students what they think of when they think “guitar” (I am certain you will get some interesting responses). Perhaps show an image of a guitar and, if you have one available, show the guitar to the group. For teachers that are able, I recommend playing a melody on the guitar that requires only one string to play (e.g. Romanza).
+Romanza is a great melody for demonstrating pitch number as it requires only one string on the guitar. Using only a single string (high e), we can focus on the frets and how changing which fret we use can create melodies. The following are some useful questions when discussing frets.
+I frequently find it useful to introduce Romanza as “The Phone Number Song” because the first 10 notes can be shown as fret numbers as “777-753-3200”, which is the same length as a phone number (with area code). Sometimes I add the extension (3, 7, and 12). Because it is the same length as a phone number, which is short enough to be easily memorized, I ask my students to memorize the melody. We always sing the melody as numbers (think solfege, but with numbers).
+Which way do I go for the high notes? (“Which sounds higher–7 or 0?”)
+What is the lowest fret on this guitar? (zero is lowest)
+Which is the highest fret on this guitar? (usually 19-24)
+
+Part 1
+======
+
+
+A. Pitch Number in Music Blocks
+===============================
+It may be helpful to switch to advanced mode now. You will need to be in advanced mode when we “set pitch number offset”.
+Ask the students to drag the Pitch Number block from the Pitch palette (it is also in Rhythm Palette in advanced mode).
+Have them guess as to what it might do.
+Have them try different numbers.
+Have them transcribe the phone number song (777-753-3200) with Pitch Number. All the note values are quarters. By default 0 = C_4, so this will sound in C minor until we use “set pitch number offset” (which is fine if you used an ukulele instead of a guitar).
+Have them create a short melody that utilizes “Scalar Interval”.
+Click on example below to hear the result of the code above.
+Click on example below to hear the result of the phone number string (pun here for the geeky to find) tuned to E_4.
+Ask students to create and compare the two examples above. What has changed? How would they need to change it if the melody where on another string, like the A string?
+
+B. Reading TAB (Smoke on the Water)
+===================================
+Despite many peoples’ assumptions, Tablature has a history that goes back hundreds of years. In the 16th and 17th centuries, lute music was distributed as tablature. There is even tablature for piano and organ. The first known tablature is for organ in the 14th century.
+For this lesson, we will focus on one string. The basic concept is that the string is tuned to a certain pitch and we name the string after the pitch that is produced when you pluck that string open (at fret zero). Therefore, the A string is called the A string because when you play it open (without any frets) what we hear is an A note.
+For guitar tablature, the above would look like the following:
+That is it! For tablature, we only need to specify the string and the fret, which in this case is zero.
+For something that uses multiple frets on the string, we simply put the number for each fret. Phone Number Song (Romanza) would look like this:
+Often, you will see “|” as barlines. Since we are in 3/4 time for Phone Number Song, it will have a barline every three notes.
+Note: There are many variations on the exact formatting, especially with regard to rhythm
+
+C. Let’s Rock Out!
+==================
+Create the following program, which will allow you to play any fret on a single string of your (brand new) guitar!
+Now try the following with your new one string fretted guitar:
+Great! You just played “Smoke on the Water” by Deep Purple and learned the basics of reading tablature.
+
+D. Create New Melodies
+======================
+Have the students use their new understanding of pitch number block to create some melodies that they like. Perhaps have them input numbers into their single string guitar and write down (on paper) the numbers for the combinations that they like. Then, have the students transcribe what they wrote into Music Blocks code using Pitch Number and Note Value blocks.
+
+E. Change in Pitch (Compass)
+============================
+One thing that I frequently do with my guitar students is have them create a “note finding compass” on the guitar. The basic premise is that they could see the similarity of each of the strings such as 1) each of the strings gets its name from the pitch that sounds when played open and 2) each string has frets that can be expressed as a number. (The pitch repeats at the octave, so after 11 the compass cycles back to 0.)
+One thing that you can have the students do to begin to incorporate art into their programs is create something like the “note finding compass”.
+When a user inputs a number into the program above, the result will be a rotation around the note finding compass. A “6”, for example, will take them a half rotation.
+Open the program at https://musicblocks.sugarlabs.org/index.html?id=1590178555758324&run=True
+
+F. Pitch Number and Scale
+=========================
+Using the same “change in pitch” block as is used in the note finding compass example above, other extensions are possible.
+Each point that can be represented with Pitch Number can fit into a point in a scale. The major scale would be the following pitch numbers (on a string tuned to c):
+Students should be challenged to synthesize the concepts they have learned in lessons prior to make unique creations.
+
+Performance/Critique
+====================
+Have students perform their composition(s) for the group
+Engage in a discussion about pitch number: Which numbers did you use in your creation? Which numbers did you not use and why? It one semitone is a half-step, what would two semitones be?
+
+Materials
+=========
+Music Blocks software (Computer, up-to-date browser)
+Paper and/or notebooks for the kids to write their TAB creations.
+
+Assessments
+===========
+Observe participation
+Do the projects use “pitch number”?
+To what extent do the students thoughtfully choose which numbers to use (and not use)?
+Are the students able to play their creations on a single string of a fretted instrument (if one is available) or sing their creation with numbers?
+(If the students perform their music on instruments) Are the students expressive in their performance?
+
+Music Blocks Lesson Plans
+=========================
+Lesson Plan: Structure and Form
+Lesson Plan: Building a Scale
+Lesson Plan: Chest, Snap, Clap with Phrase Maker (2 of 3)
+Lesson Plan: Colors of Intervals
+Lesson Plan: Creating Harmonics
+Lesson Plan: Dissonance to Consonance
+Lesson Plan: Exploring the Harmonic Series
+Lesson Plan: Frere Jacques with Phrase Maker (3 of 3)
+Lesson Plan: Geometry and Rhythms
+Lesson Plan: Hailstorm Music with Collatz Conjecture
+Lesson Plan: Interval Sudoku
+Lesson Plan: Make a Metronome
+Lesson Plan: Make Your Own Tuner
+Lesson Plan: Thirds and Sixths
+Lesson Plan: Twinkle Twinkle with Phrase Maker (1 of 3)
+Lesson Plan: Guitar Frets and Semi-tones
+Copyright 2019-2023 | CC BY-SA | Remake Music LLC
+

@@ -1,17 +1,18 @@
 import os
 import config
-from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 from qdrant_client import QdrantClient
 from qdrant_client.models import Distance, VectorParams, PointStruct
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_core.documents import Document
+from tqdm import tqdm
 
 client = QdrantClient(
     url=config.QDRANT_URL,
     api_key=config.QDRANT_API_KEY
 )
 
-docs_dir = "data/guide"
+docs_dir = "data"
 raw_docs = []
 
 for filename in os.listdir(docs_dir):
@@ -26,7 +27,7 @@ for filename in os.listdir(docs_dir):
             print(f"Error reading {filename}: {e}")
 
 if not raw_docs:
-    raise ValueError("No valid documents found in the 'docs/' directory.")
+    raise ValueError("No valid documents found in the 'data' directory.")
 
 splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=30)
 chunked_docs = splitter.split_documents(raw_docs)
@@ -60,5 +61,15 @@ points = [
     for i in range(len(chunked_docs))
 ]
 
-client.upsert(collection_name=collection_name, points=points)
-print(f"Uploaded {len(points)} chunks to Qdrant collection '{collection_name}'.")
+BATCH_SIZE = 200
+
+print(f"Uploading {len(points)} points in batches of {BATCH_SIZE}...")
+for i in tqdm(range(0, len(points), BATCH_SIZE)):
+    batch = points[i:i+BATCH_SIZE]
+    try:
+        client.upsert(collection_name=collection_name, points=batch)
+    except Exception as e:
+        print(f"Failed to upload batch {i}-{i + len(batch)}: {e}")
+
+print(f"Successfully uploaded all chunks to Qdrant collection '{collection_name}'.")
+

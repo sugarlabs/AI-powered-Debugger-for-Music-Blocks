@@ -1,0 +1,132 @@
+Title: Lesson Plan: Exploring the Harmonic Series – Music, Art, and Programming Family Learning Center
+URL: https://mapflc.com/lesson-plans/lesson-plan-exploring-the-harmonic-series/
+Age Range: 7-13
+Duration: 60 min
+
+Summary
+=======
+Within a single pitch played from an instrument are many other pitches that we call “harmonics”. Harmonics all have a simple ratio relationship to the fundamental pitch being played. Students will explore the math behind harmonics as well as improve their aural ability to identify certain harmonics.
+
+Age:
+====
+7-13 years
+
+Lesson duration:
+================
+60 minutes
+Introduction: What is a harmonic? (5 min)
+Demonstration: Demonstration of harmonics on a physical instrument, or with one’s voice. (5 min)
+Demonstrate the simple ratio math in Music Blocks, based on a low frequency (hz) sine wave. (5 min)
+Ask students to try some different low number ratios. (10 min)
+Guide students to creating a program that uses box to go through the harmonic series. (10 min)
+Guide students to making their program interactive. (15 min)
+Have students share their projects and discuss what they learned. (10 min)
+
+Number of Students
+==================
+Up to 10.
+
+Rationale
+=========
+Harmonics are fundamental to an instrument’s timbre, and they also play an important role in harmony. Students will explore the role harmonics play in music, while simultaneously being exposed to the mathematics that are inherent in this musical concept.
+
+Objectives
+==========
+Students should be able to understand the role harmonics play in music, as well as to be able to describe harmonics mathematically. Student programs should demonstrate this understanding.
+
+Lesson
+======
+
+
+Introduction and Demonstration
+==============================
+Ask students if they have heard the word “harmonics” before. You might take some time to review sound waves (and the oscillator widget in Music Blocks may serve useful for this purpose).
+I find it useful to have an instrument nearby and play some of the harmonics. For example, on the guitar (or any stringed instrument) the string length that vibrates can be divided into simple divisions (i.e. halves, thirds, quarters, etc.) At each point of division, a harmonic can be played. If you do not have an instrument nearby, you can use your voice. It takes some practice and careful listening, but the way to start is with your mouth closed, and by slowly beginning to open your mouth with your lips in an “Ah” shape. If you do not have the expertise to demonstrate this yourself for the class (and cannot find any students to help you), you can find some helpful videos online. (TODO: Create/find videos)
+Ask students to listen to the different harmonics as you go up and down the harmonic series. Show the placement of the harmonics on the instrument (if possible).
+When you are finished demonstrating the musical concept of harmonics on the physical instruments, use Music Blocks to point out to the students the simple ratio math behind harmonics. For example, the first harmonic (which would be directly at the center of a string on a stringed instrument) is a 2:1 ratio to the fundamental. Another way to express this is pitch x 2/1 or “a fundamental pitch multiplied by 2/1“.
+Pitch of 110 Hertz multiplied by 1/1 (no change)
+Pitch of 110 Hertz multiplied by 2/1 (double the pitch)
+The next harmonic (which has two points on a string, which divide the string into thirds) is a 3:1 ratio to the fundamental. It can be expressed mathematically as pitch x 3/1 or “a fundamental pitch multiplied by 3/1“. The pattern continues with 4/1, 5/1, 6/1, 7/1, etc.
+
+Part 1
+======
+
+
+A. Exploring the Harmonic Series
+================================
+Ask students to create the structure in Music Blocks to recreate the harmonic series. Then have them try different low numbers (e.g. 1-13). You may engage students with the following.
+Describe the mathematical pattern as the harmonics get higher and higher.
+Find a few favorite harmonics between 2 and 13.
+Try numbers higher than 13. Ask them to describe what happens.
+If you have sufficient time, you might ask the students to create a musical snippet only using harmonics. The following image is
+Playing with harmonics can be fun, exciting, and full of new discoveries!
+
+B. Using Box to Move Up the Harmonic Series
+===========================================
+Next, guide the students to making a simple program that steps through the harmonic series. The Box block and Add one to Box blocks are both perfect for this purpose.
+Have students create this simple program and try different numbers of repeats and note values.
+
+C. Creating an Interactive Program to Explore Harmonics
+=======================================================
+Ask students to create an interactive program to explore harmonics. One possibility is to make the harmonics higher as the cursor is higher on the screen, and lower as the cursor moves lower on the screen.
+In order to avoid negative numbers, let’s calculate half of the screen height using the height block in the media palette.
+Next, we will put an addition block so that we can add the cursor location to half of the height.
+From the sensors palette, find the cursor y block and add it to the calculation.
+At this point, it is helpful to print the output to see the output of the calculations. If the numbers are wrong (e.g. decimal places; numbers that are too high), then it means there is a bug in your program. Take a moment to use print to do some debugging.
+Using print to visualize the output.
+When you run the program, you will see the number, but not hear any sounds.
+If you do not add one to the code, you will get a “0 Harmonic” when the cursor is near the bottom of the screen, and the zero will be multiplied to the hertz of the pitch, resulting in 0 hertz. Since hertz is “waves per second”, zero hertz is basically “no vibration”.
+In order to remedy this, add one to your existing code.
+Lastly, put your code together. Multiply your mathematical structure by a number in Hz (e.g. 110 for a pitch of Low A). I like to duplicate the structure and add it to a print block so that I can see the intended output.
+Once you are done, you should hear the harmonic series go up and down as your cursor goes up and down across the screen.
+
+Performance/Critique
+====================
+Have students discuss what they learned from the project for the class.
+Have students showcase any extensions they created for the class.
+
+Materials
+=========
+Physical stringed instrument, if possible
+Music Blocks software (Computer, up-to-date browser)
+
+Assessments
+===========
+Observe participation
+Do the students understand the math behind harmonics?
+Do the students understand the musical implications of harmonics?
+
+Student/Teacher Projects
+========================
+https://musicblocks.sugarlabs.org/index.html?id=1621024609571492&run=True is a student project that is a completed project from the above lesson plan.
+https://musicblocks.sugarlabs.org/index.html?id=1623443798730071&run=True is a teacher project that uses harmonics in an interactive way.
+
+Leave a Reply Cancel reply
+==========================
+Your email address will not be published. Required fields are marked *
+Comment *
+Name *
+Email *
+Website
+Save my name, email, and website in this browser for the next time I comment.
+
+Music Blocks Lesson Plans
+=========================
+Lesson Plan: Structure and Form
+Lesson Plan: Building a Scale
+Lesson Plan: Chest, Snap, Clap with Phrase Maker (2 of 3)
+Lesson Plan: Colors of Intervals
+Lesson Plan: Creating Harmonics
+Lesson Plan: Dissonance to Consonance
+Lesson Plan: Exploring the Harmonic Series
+Lesson Plan: Frere Jacques with Phrase Maker (3 of 3)
+Lesson Plan: Geometry and Rhythms
+Lesson Plan: Hailstorm Music with Collatz Conjecture
+Lesson Plan: Interval Sudoku
+Lesson Plan: Make a Metronome
+Lesson Plan: Make Your Own Tuner
+Lesson Plan: Thirds and Sixths
+Lesson Plan: Twinkle Twinkle with Phrase Maker (1 of 3)
+Lesson Plan: Guitar Frets and Semi-tones
+Copyright 2019-2023 | CC BY-SA | Remake Music LLC
+
