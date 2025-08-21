@@ -1,29 +1,30 @@
-# AI-Powered Debugger for Music Blocks 🎶 🎼 🎵
+# 🎵 AI-Powered Debugger for Music Blocks
 
 ## Sugar Labs Google Summer of Code 2025
 
-### Help Shape the Future of Music Education
+### 🚀 Help Shape the Future of Music Education
 
 Music Blocks is an advanced platform that makes learning programming through music fun and accessible. This AI-powered debugger takes it to the next level by providing intelligent, kid-friendly assistance to young learners as they create their musical projects. **We welcome passionate contributors to join us in revolutionizing music education through AI.**
 
 ---
 
-## Table of Contents
+## 📋 Table of Contents
 
-- [Project Overview](#project-overview)
-- [Architecture](#architecture)
-- [Tech Stack](#tech-stack)
-- [Components](#components)
-- [Quick Start](#quick-start)
-- [AWS EC2 Deployment](#aws-ec2-deployment)
-- [Development Setup](#development-setup)
-- [Project Structure](#project-structure)
-- [API Documentation](#api-documentation)
-- [Additional Resources](#additional-resources)
+- [🎯 Project Overview](#project-overview)
+- [🏗️ Architecture](#architecture)
+- [💻 Tech Stack](#tech-stack)
+- [🔧 Components](#components)
+- [⚡ Quick Start](#quick-start)
+- [☁️ AWS EC2 Deployment](#aws-ec2-deployment)
+- [🛠️ Development Setup](#development-setup)
+- [📁 Project Structure](#project-structure)
+- [📡 API Documentation](#api-documentation)
+- [🤝 Contributing](#contributing)
+- [📚 Additional Resources](#additional-resources)
 
 ---
 
-## Project Overview
+## 🎯 Project Overview
 
 The AI-Powered Music Blocks Debugger is an intelligent assistant designed to help children debug their Music Blocks projects. It combines the power of modern AI with educational pedagogy to provide:
 
@@ -41,7 +42,7 @@ The AI-Powered Music Blocks Debugger is an intelligent assistant designed to hel
 
 ---
 
-## Architecture
+## 🏗️ Architecture
 
 ```mermaid
 graph TB
@@ -64,7 +65,7 @@ graph TB
     B -->|AI Response| A
     
     L[Streamlit UI] --> B
-    M[AWS EC2] --> N[Tmux Session]
+    M[AWS EC2] --> N[Systemd Service]
     N --> B
 ```
 
@@ -78,7 +79,7 @@ graph TB
 
 ---
 
-## Tech Stack
+## 💻 Tech Stack
 
 ### Backend Core
 - **[FastAPI](https://fastapi.tiangolo.com/)** - Modern, fast web framework for APIs
@@ -101,12 +102,12 @@ graph TB
 
 ### Infrastructure
 - **[AWS EC2](https://aws.amazon.com/ec2/)** - Cloud hosting and deployment
-- **[Tmux](https://github.com/tmux/tmux)** - Terminal multiplexer for persistent sessions
+- **[Systemd](https://systemd.io/)** - Service management for persistent deployment
 - **[CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)** - Cross-origin resource sharing support
 
 ---
 
-## Components
+## 🔧 Components
 
 ### Core Modules
 
@@ -158,7 +159,7 @@ Structured educational content:
 
 ---
 
-## Quick Start
+## ⚡ Quick Start
 
 ### Prerequisites
 
@@ -214,11 +215,11 @@ The API will be available at `http://localhost:8000`
 
 ---
 
-## AWS EC2 Deployment
+## ☁️ AWS EC2 Deployment
 
 ### Production Setup
 
-Our production deployment uses AWS EC2 with Tmux for persistent sessions:
+Our production deployment uses AWS EC2 with systemd for persistent service management:
 
 #### 1. **EC2 Instance Configuration**
 ```bash
@@ -229,7 +230,7 @@ ssh -i your-key.pem ubuntu@your-ec2-ip
 sudo apt update && sudo apt upgrade -y
 
 # Install Python and dependencies
-sudo apt install python3 python3-pip python3-venv tmux -y
+sudo apt install python3 python3-pip python3-venv -y
 ```
 
 #### 2. **Project Deployment**
@@ -252,36 +253,50 @@ pip install -r requirements.txt
 nano .env
 ```
 
-#### 4. **Persistent Deployment with Tmux**
+#### 4. **Persistent Deployment with Systemd**
 ```bash
-# Create a new tmux session named 'debugger'
-tmux new-session -d -s debugger
+# Create systemd service file
+sudo vim /etc/systemd/system/debugger.service
+```
 
-# Attach to the session
-tmux attach-session -t debugger
+Add the following service configuration:
 
-# Inside tmux, navigate to project and run
-cd AI-powered-Debugger-for-Music-Blocks
-source venv/bin/activate
-uvicorn app.api:app --host 0.0.0.0 --port 8000
+```ini
+[Unit]
+Description=Debugger for Music Blocks - FastAPI backend
+After=network.target
 
-# Detach from tmux (Ctrl+B, then D)
-# The server continues running in background
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/AI-powered-Debugger-for-Music-Blocks
+ExecStart=/home/ubuntu/AI-powered-Debugger-for-Music-Blocks/venv/bin/python -m uvicorn app.api:app --host 0.0.0.0 --port 8000
+Restart=always
+RestartSec=5
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target
 ```
 
 #### 5. **Managing the Service**
 ```bash
-# List tmux sessions
-tmux list-sessions
+# Reload systemd and enable the service
+sudo systemctl daemon-reload
+sudo systemctl enable debugger.service
+sudo systemctl start debugger.service
 
-# Attach to existing session
-tmux attach-session -t debugger
+# Check service status
+sudo systemctl status debugger.service
+
+# View real-time logs
+journalctl -u debugger.service -f
+
+# Stop/restart the service
+sudo systemctl stop debugger.service
+sudo systemctl restart debugger.service
 
 # Check if server is running
 curl http://localhost:8000/docs
-
-# View server logs
-tmux attach-session -t debugger
 ```
 
 ### Security Configuration
@@ -301,7 +316,7 @@ tmux attach-session -t debugger
 
 ---
 
-## Development Setup
+## 🛠️ Development Setup
 
 ### Local Development Workflow
 
@@ -346,7 +361,7 @@ python -m embeddings.injest --update
 
 ---
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 AI-powered-Debugger-for-Music-Blocks/
@@ -381,7 +396,7 @@ AI-powered-Debugger-for-Music-Blocks/
 
 ---
 
-## API Documentation
+## 📡 API Documentation
 
 ### Endpoints
 
@@ -430,7 +445,93 @@ Analyzes Music Blocks projects and provides debugging assistance.
 
 ---
 
-## Additional Resources
+## 🤝 Contributing
+
+### 🌟 Join the Music Blocks Revolution
+
+Music Blocks is changing how children learn programming and music theory. Your contributions can help make this educational tool even more powerful and accessible. Whether you're passionate about education, AI, music, or programming, there's a place for you in our community.
+
+### How to Contribute
+
+#### 1. **Get Started**
+```bash
+# Fork the repository
+git clone https://github.com/your-username/AI-powered-Debugger-for-Music-Blocks.git
+
+# Create a feature branch
+git checkout -b feature/amazing-new-feature
+
+# Make your changes
+# Test thoroughly
+# Commit with clear messages
+git commit -m "Add amazing new feature for better debugging"
+
+# Push and create Pull Request
+git push origin feature/amazing-new-feature
+```
+
+#### 2. **Areas for Contribution**
+
+##### 🤖 AI & Machine Learning
+- Improve prompt engineering for better kid-friendly responses
+- Enhance context retrieval algorithms
+- Add support for multiple languages
+- Develop specialized models for music education
+
+##### 🎼 Music Education
+- Expand Music Blocks documentation coverage
+- Create more educational examples and lesson plans
+- Develop music theory explanation modules
+- Add support for advanced musical concepts
+
+##### 💻 Backend Development
+- Optimize API performance and scalability
+- Add comprehensive testing coverage
+- Implement caching strategies
+- Enhance error handling and logging
+
+##### 🎨 Frontend Integration
+- Improve Music Blocks web integration
+- Create better user interfaces
+- Add real-time collaboration features
+- Develop mobile-friendly interfaces
+
+##### 📖 Documentation & Education
+- Write tutorials and guides
+- Create video demonstrations
+- Translate content to other languages
+- Develop teacher resources
+
+#### 3. **Contribution Guidelines**
+
+##### Code Quality
+- Follow PEP 8 Python style guidelines
+- Write comprehensive docstrings
+- Add unit tests for new features
+- Ensure backward compatibility
+
+##### Educational Focus
+- Keep the target audience (children) in mind
+- Use simple, clear language in all user-facing content
+- Test with actual young learners when possible
+- Prioritize fun and engaging interactions
+
+##### Documentation
+- Update README for significant changes
+- Document new API endpoints
+- Provide examples for new features
+- Keep inline comments clear and helpful
+
+### 💬 Community
+
+- **GitHub Issues**: Report bugs and request features
+- **GitHub Discussions**: Ask questions and share ideas
+- **Sugar Labs Community**: Join the broader educational technology community
+- **Music Blocks Forums**: Connect with educators and developers
+
+---
+
+## 📚 Additional Resources
 
 ### Educational Context
 - **[Music Blocks Official](https://musicblocks.sugarlabs.org/)** - Main Music Blocks platform
@@ -450,20 +551,20 @@ Analyzes Music Blocks projects and provides debugging assistance.
 
 ### Development Tools
 - **[AWS EC2 Documentation](https://docs.aws.amazon.com/ec2/)** - Cloud deployment
-- **[Tmux Guide](https://github.com/tmux/tmux/wiki)** - Terminal multiplexer
+- **[Systemd Documentation](https://systemd.io/)** - Service management
 - **[Python Virtual Environments](https://docs.python.org/3/tutorial/venv.html)** - Environment management
 
 ---
 
-## Let's Build the Future of Music Education Together
+## 🎉 Let's Build the Future of Music Education Together!
 
 The intersection of AI, music, and education offers incredible opportunities to inspire the next generation of creative programmers and musical artists. Your contributions to this project help democratize music education and make programming accessible through the universal language of music.
 
 **Every line of code, every documentation improvement, every bug fix, and every new feature brings us closer to a world where any child can express their creativity through the power of Music Blocks.**
 
-**⭐️ Star this repository** to show your support!  
-**🤝 Fork and contribute** to make a difference!  
-**📢 Share with others** who are passionate about education and technology!
+⭐ **Star this repository** to show your support!  
+🤝 **Fork and contribute** to make a difference!  
+📢 **Share with others** who are passionate about education and technology!
 
 ---
 
